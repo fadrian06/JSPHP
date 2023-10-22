@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "JSPHP",
+		}
+	],
+	"settings": {
+		"LSP": {
+			"ltex-ls": {
+				"enabled": false,
+			},
+			"LSP-html": {
+				"enabled": false,
+			},
+			"LSP-tailwindcss":
+			{
+				"enabled": false
+			},
+		},
+	},
+}
