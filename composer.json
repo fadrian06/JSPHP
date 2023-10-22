@@ -1,8 +1,19 @@
 {
 	"require-dev": {
-		"phpunit/phpunit": "^10.4"
+		"phpunit/phpunit": "^10.4",
+		"phpstan/phpstan": "^1.10",
+		"phpstan/extension-installer": "^1.3",
+		"phpstan/phpstan-strict-rules": "^1.5",
+		"phpstan/phpstan-deprecation-rules": "^1.1"
 	},
 	"scripts": {
-		"test": "phpunit"
+		"test": "phpunit",
+		"lint": "phpstan -cphpstan.neon --no-progress",
+		"lint:save": "phpstan -cphpstan.neon --no-progress --generate-baseline=phpstan-errors.neon"
+	},
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true
+		}
 	}
 }

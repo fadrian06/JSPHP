@@ -1,0 +1,11 @@
+includes:
+  - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+  - phpstan-errors.neon
+
+parameters:
+  level: max
+  paths:
+    - src
+    - tests
+  excludePaths:
+    - vendor

@@ -13,10 +13,23 @@
 			"LSP-html": {
 				"enabled": false,
 			},
-			"LSP-tailwindcss":
-			{
+			"LSP-tailwindcss": {
 				"enabled": false
 			},
 		},
 	},
+	"build_systems": [
+		{
+			"name": "Lint",
+			"shell_cmd": "composer lint"
+		},
+		{
+			"name": "Lint - Save errors",
+			"shell_cmd": "composer lint:save"
+		},
+		{
+			"name": "Test",
+			"shell_cmd": "composer test"
+		}
+	]
 }
