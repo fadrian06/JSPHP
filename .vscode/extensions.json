@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"bmewburn.vscode-intelephense-client",
+		"swordev.phpstan",
+		"wayou.vscode-todo-highlight"
+	]
+}

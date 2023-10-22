@@ -1,0 +1,29 @@
+--- ✄ -----------------------
+JSPHP:
+  --- ✄ -----------------------
+  JSString:
+    ☐ Implement toUpperCase()
+    ☐ Implement toLoweCase()
+    ☐ Implement split()
+    ...
+  --- ✄ -----------------------
+  JSNumber:
+    ...Implement Number methods.
+  --- ✄ -----------------------
+  JSArray:
+    ☐ Implement forEach()
+    ☐ Implement map()
+    ☐ Implement filter()
+    ☐ Implement reduce()
+    ☐ Implement join()
+    ☐ Implement concat()
+    ...
+  --- ✄ -----------------------
+  JSON:
+    ☐ Implement parse()
+    ☐ Implement stringify()
+    ...
+  --- ✄ -----------------------
+  Math:
+    ☐ Implement random()
+    ...
