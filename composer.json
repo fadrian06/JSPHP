@@ -37,9 +37,6 @@
     "lint": "Run JSPHP codebase static analysis",
     "lint:save": "Run static analysis and save errors result to ignore them in later runs"
   },
-  "require": {
-    "php": "^7.3|8"
-  },
   "require-dev": {
     "phpunit/phpunit": "^10.4",
     "phpstan/phpstan": "^1.10",
