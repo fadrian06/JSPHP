@@ -20,10 +20,15 @@ JSPHP:
     ...
   --- ✄ -----------------------
   JSON:
-    ☐ Implement parse()
+    ✔ Implement parse() @done (23-10-24 18:57)
+      ☐ Implement second parameter
+      ☐ Create test for other data types (currently only test for strings)
     ☐ Implement stringify()
     ...
   --- ✄ -----------------------
   Math:
     ☐ Implement random()
     ...
+
+Tests:
+  ☐ Implement JavaScript tests

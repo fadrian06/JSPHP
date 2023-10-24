@@ -21,15 +21,18 @@
   "build_systems": [
     {
       "name": "Lint",
-      "shell_cmd": "composer lint"
+      "shell_cmd": "composer lint",
+      "quiet": true
     },
     {
       "name": "Lint - Save errors",
-      "shell_cmd": "composer lint:save"
+      "shell_cmd": "composer lint:save",
+      "quiet": true
     },
     {
       "name": "Test",
-      "shell_cmd": "composer test"
+      "shell_cmd": "composer test",
+      "quiet": true
     }
   ]
 }
