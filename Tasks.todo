@@ -3,7 +3,7 @@ JSPHP:
   --- ✄ -----------------------
   JSString:
     ☐ Implement toUpperCase()
-    ☐ Implement toLoweCase()
+    ☐ Implement toLowerCase()
     ☐ Implement split()
     ...
   --- ✄ -----------------------
