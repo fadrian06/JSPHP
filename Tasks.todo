@@ -2,8 +2,10 @@
 JSPHP:
   --- ✄ -----------------------
   JSString:
-    ☐ Implement toUpperCase()
-    ☐ Implement toLowerCase()
+    ✔ Implement toUpperCase() @done (6/12/2023, 0:45:33)
+      ☐ Test toUpperCase()
+    ✔ Implement toLowerCase() @done (6/12/2023, 0:45:36)
+      ☐ Test toLowerCase()
     ☐ Implement split()
     ...
   --- ✄ -----------------------
@@ -22,13 +24,17 @@ JSPHP:
   JSON:
     ✔ Implement parse() @done (23-10-24 18:57)
       ☐ Implement second parameter
-      ☐ Create test for other data types (currently only test for strings)
+        ☐ Run the reviver param with keys recursively iteration
+      ✔ Create test for other data types (currently only test for strings) @done (4/12/2023, 20:50:09)
     ☐ Implement stringify()
+      ☐ Implement method signature overload for the replacer param
     ...
   --- ✄ -----------------------
   Math:
     ☐ Implement random()
+    ☐ Test abs() method
     ...
 
 Tests:
   ☐ Implement JavaScript tests
+  ☐ Test against unexpected argument types on all classes
