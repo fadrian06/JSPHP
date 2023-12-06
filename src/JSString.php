@@ -3,9 +3,10 @@
 /**
  * Allows manipulation and formatting of text strings and determination and
  * location of substrings within strings.
+ * @property-read int $length Returns the length of a String object.
  */
-final readonly class JSString implements Stringable {
-  public int $length;
+final class JSString implements Stringable {
+  private int $length;
 
   function __construct(private string $value = '') {
     $this->length = mb_strlen($value);
@@ -13,6 +14,13 @@ final readonly class JSString implements Stringable {
 
   function __toString(): string {
     return $this->value;
+  }
+
+  function __get(string $name): ?int {
+    return match ($name) {
+      'length' => $this->length,
+      default => null
+    };
   }
 
   /** Converts all the alphabetic characters in a string to uppercase. */
