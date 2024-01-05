@@ -30,13 +30,15 @@
 	"scripts": {
 		"test": "phpunit --no-progress --colors=auto",
 		"lint": "phpstan -cphpstan.neon --no-progress",
-		"lint:save": "phpstan -cphpstan.neon --no-progress --generate-baseline=phpstan-errors.neon"
+		"lint:save": "phpstan -cphpstan.neon --no-progress --generate-baseline=phpstan-errors.neon",
+    "coverage": "phpunit --colors=auto --coverage-html=.coverage"
 	},
 	"scripts-descriptions": {
 		"test": "Run JSPHP test suite",
 		"lint": "Run JSPHP codebase static analysis",
-		"lint:save": "Run static analysis and save errors result to ignore them in later runs"
-	},
+		"lint:save": "Run static analysis and save errors result to ignore them in later runs",
+	  "coverage": "Generate PHP Test code coverage report"
+  },
 	"require": {
     "php": "^7.1 || ^8",
 		"symfony/polyfill-php73": "^1.28",

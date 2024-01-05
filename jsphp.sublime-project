@@ -37,7 +37,7 @@
   "build_systems": [
     {
       "name": "Lint",
-      "shell_cmd": "composer lint -- -cphpstan.neon --no-progress --no-ansi",
+      "shell_cmd": "composer lint -- --no-ansi",
       "quiet": true,
     },
     {
@@ -49,6 +49,11 @@
       "name": "Test",
       "shell_cmd": "composer test -- --colors=never",
       "quiet": true,
+    },
+    {
+      "name": "Coverage",
+      "shell_cmd": "composer coverage -- --colors=never",
+      "quiet": true
     }
   ],
 }
