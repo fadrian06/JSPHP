@@ -7,3 +7,5 @@ composer.lock
 .phpunit.cache
 jsphp.sublime-workspace
 .coverage
+node_modules
+package-lock.json
