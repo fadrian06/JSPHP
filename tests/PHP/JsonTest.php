@@ -9,63 +9,51 @@ use JSON;
 use JsonException;
 
 final class JsonTest extends TestCase {
-  /** @test */
-  function cannot_create_a_JSON_instance(): void {
+  function test_cannot_create_a_JSON_instance(): void {
     $this->expectException('Error');
     new JSON; // @phpstan-ignore-line
   }
 
-  /** @test */
-  function cannot_create_an_instance_from_a_JSON_child_class(): void {
+  function test_cannot_create_an_instance_from_a_JSON_child_class(): void {
     $this->expectException('Error');
     new class() extends JSON { // @phpstan-ignore-line
     };
   }
 
-  /** @test */
-  function cannot_parse_an_invalid_JSON(): void {
+  function test_cannot_parse_an_invalid_JSON(): void {
     $this->expectException(JsonException::class);
     JSON::parse('Some invalid json');
   }
 
-  /**
-   * @test
-   * @dataProvider \Tests\DataProviders\StringsDataProvider::getRegularStringsDataProvider
-   */
-  function can_parse_valid_literal_strings(string ...$raws): void {
+  /** @dataProvider \Tests\DataProviders\StringsDataProvider::getRegularStringsDataProvider */
+  function test_can_parse_valid_literal_strings(string ...$raws): void {
     foreach ($raws as $raw) {
       try {
         self::assertSame(
           str_replace(['\\\\', '\"'], ['\\', '"'], $raw),
           JSON::parse("\"$raw\"")
         );
-      } catch (JsonException) {
+      } catch (JsonException $error) {
         throw new JsonException("Failed to parse string \"$raw\"");
       }
     }
   }
 
-  /** @test */
-  function can_parse_a_json_null_datatype(): void {
+  function test_can_parse_a_json_null_datatype(): void {
     self::assertNull(JSON::parse('null'));
   }
 
-  /**
-   * @test
-   * @dataProvider getRegularNumbersDataProvider
-   */
-  function can_parse_valid_literal_numbers(string $number): void {
+  /** @dataProvider getRegularNumbersDataProvider */
+  function test_can_parse_valid_literal_numbers(string $number): void {
     self::assertEquals($number, JSON::parse("$number"));
   }
 
-  /** @test */
-  function can_parse_valid_literal_booleans(): void {
+  function test_can_parse_valid_literal_booleans(): void {
     self::assertTrue(JSON::parse('true'));
     self::assertFalse(JSON::parse('false'));
   }
 
-  /** @test */
-  function can_parse_valid_literal_arrays(): void {
+  function test_can_parse_valid_literal_arrays(): void {
     self::assertSame([], JSON::parse('[]'));
     self::assertSame(['a', 'b', 'c'], JSON::parse('["a", "b", "c"]'));
     self::assertSame([1, 2, 3], JSON::parse('[1, 2, 3]'));
@@ -73,8 +61,7 @@ final class JsonTest extends TestCase {
     self::assertSame([[], []], JSON::parse('[[], []]'));
   }
 
-  /** @test */
-  function can_parse_valid_literal_objects(): void {
+  function test_can_parse_valid_literal_objects(): void {
     self::assertIsObject(JSON::parse('{}'));
 
     self::assertEquals((object) ['a' => 'b'], JSON::parse('{"a": "b"}'));
