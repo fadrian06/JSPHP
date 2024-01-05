@@ -14,25 +14,41 @@
         "enabled": false,
       },
       "LSP-tailwindcss": {
-        "enabled": false
+        "enabled": false,
+      },
+      "LSP-rome": {
+        "enabled": false,
+      },
+      "LSP-eslint": {
+        "enabled": false,
+      },
+      "LSP-intelephense": {
+        "settings": {
+          "intelephense.environment.phpVersion": "7.1.0",
+          "intelephense.format.braces": "k&r",
+        },
+      },
+      "formatters": {
+        "source.json.sublime": "LSP-json",
+        "source.json.composer": "LSP-json",
       },
     },
   },
   "build_systems": [
     {
       "name": "Lint",
-      "shell_cmd": "composer lint",
-      "quiet": true
+      "shell_cmd": "composer lint -- -cphpstan.neon --no-progress --no-ansi",
+      "quiet": true,
     },
     {
       "name": "Lint - Save errors",
-      "shell_cmd": "composer lint:save",
-      "quiet": true
+      "shell_cmd": "composer lint:save -- --no-ansi",
+      "quiet": true,
     },
     {
       "name": "Test",
-      "shell_cmd": "composer test",
-      "quiet": true
+      "shell_cmd": "composer test -- --colors=never",
+      "quiet": true,
     }
-  ]
+  ],
 }

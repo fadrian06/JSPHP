@@ -2,39 +2,98 @@
 JSPHP:
   --- ✄ -----------------------
   JSString:
-    ✔ Implement toUpperCase() @done (6/12/2023, 0:45:33)
-      ☐ Test toUpperCase()
-    ✔ Implement toLowerCase() @done (6/12/2023, 0:45:36)
-      ☐ Test toLowerCase()
-    ☐ Implement split()
-    ...
+    ☐ Core behaviour
+      ☐ Function constructor
+        ☐ Array and object coercion
+      ✔ Characters access with array access syntax @done (23-12-10 21:23)
+      ✔ Return null for negative and out of range indexes @done (30/12/2023 16:46:07)
+    ☐ Static methods
+      ☐ String.fromCharCode()
+      ☐ String.fromCodePoint()
+      ☐ String.raw()
+    ✔ Instance properties @done (05/01/2024 14:35:21)
+      ✔ length property @done (23-12-30 14:43)
+        ✔ Readonly constraint to length property @done (30/12/2023 16:37:49)
+          ✔ Don't throw an error when attempt to reassign length property @done (30/12/2023 16:37:48)
+    ☐ Instance methods
+      ☐ String.at()
+      ☐ String.charAt()
+      ☐ String.charCodeAt()
+      ☐ String.codePointAt()
+      ☐ String.concat()
+      ☐ String.endsWith()
+      ☐ String.includes()
+      ☐ String.indexOf()
+      ☐ String.isWellFormed()
+      ☐ String.lastIndexOf()
+      ☐ String.localeCompare()
+      ☐ String.match()
+      ☐ String.matchAll()
+      ☐ String.normalize()
+      ☐ String.padEnd()
+      ☐ String.padStart()
+      ☐ String.repeat()
+      ☐ String.replace()
+      ☐ String.replaceAll()
+      ☐ String.search()
+      ☐ String.slice()
+      ☐ String.split()
+      ☐ String.startsWith()
+      ☐ String.substring()
+      ☐ String.toLocaleLowerCase()
+      ☐ String.toLocaleUpperCase()
+      ✔ String.toLowerCase() @done (6/12/2023, 0:45:36)
+      ✔ String.toString() @done (23-12-30 16:12)
+      ✔ String.toUpperCase() @done (6/12/2023, 0:45:33)
+      ☐ String.toWellFormed()
+      ✔ String.trim() @done (30/12/2023 16:53:34)
+      ✔ String.trimEnd() @done (30/12/2023 16:53:38)
+      ✔ String.trimStart() @done (30/12/2023 16:53:39)
+      ✔ String.valueOf() @done (23-12-30 16:12)
+  --- ✄ -----------------------
+  JSRegExp:
   --- ✄ -----------------------
   JSNumber:
-    ...Implement Number methods.
   --- ✄ -----------------------
   JSArray:
-    ☐ Implement forEach()
-    ☐ Implement map()
-    ☐ Implement filter()
-    ☐ Implement reduce()
-    ☐ Implement join()
-    ☐ Implement concat()
-    ...
+    ☐ Instance methods
+      ☐ Array.forEach()
+      ☐ Array.map()
+      ☐ Array.filter()
+      ☐ Array.reduce()
+      ☐ Array.join()
+      ☐ Array.concat()
   --- ✄ -----------------------
   JSON:
-    ✔ Implement parse() @done (23-10-24 18:57)
-      ☐ Implement second parameter
-        ☐ Run the reviver param with keys recursively iteration
-      ✔ Create test for other data types (currently only test for strings) @done (4/12/2023, 20:50:09)
-    ☐ Implement stringify()
-      ☐ Implement method signature overload for the replacer param
-    ...
+    ☐ Core behaviour
+      ✔ Make class no instantiable @done (23-12-10 19:20)
+    ☐ Static methods
+      ☐ JSON.parse()
+        ☐ reviver parameter
+          ☐ Run the reviver param with keys recursively iteration
+        ✔ Create test for other data types (currently only test for strings) @done (4/12/2023, 20:50:09)
+      ☐ JSON.stringify()
+        ✔ String.method signature overload for the replacer param @done (23-12-30 14:26)
   --- ✄ -----------------------
   Math:
-    ☐ Implement random()
-    ☐ Test abs() method
-    ...
+    ✔ Core behaviour @done (05/01/2024 14:41:14)
+      ✔ Make class no instantiable @done (05/01/2024 14:41:09)
+    ☐ Static methods
+      ☐ Math.random()
+      ☐ Math.abs()
+        ☐ Test abs() method
+  --- ✄ -----------------------
+  console:
+    ☐ Static methods
+      ☐ console.log()
+      ☐ console.info()
+      ☐ console.error()
+      ☐ console.table()
+  --- ✄ -----------------------
+  ✔ undefined constant @done (23-12-10 21:20)
 
 Tests:
-  ☐ Implement JavaScript tests
+  ☐ Write all javaScript tests
   ☐ Test against unexpected argument types on all classes
+  ✔ Test toLowerCase() @done (30/12/2023 16:47:45)
+  ✔ Test toUpperCase() @done (30/12/2023 16:47:44)
