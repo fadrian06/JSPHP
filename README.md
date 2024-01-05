@@ -1,5 +1,7 @@
 # Wait... JS and PHP? How's that?
 
+> Nota: Esta documentación está siendo traducida: [> Ver en español](LEAME.md)
+
 📚 JSPHP is a powerful PHP library that provides a set of classes designed to mimic the behavior of **JavaScript's primitive classes** such as Number, String, and more.
 
 🎯 With JSPHP, PHP developers can leverage familiar JavaScript concepts and functionalities in their PHP projects. 🌈
