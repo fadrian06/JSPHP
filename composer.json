@@ -28,7 +28,7 @@
 		"library"
 	],
 	"scripts": {
-		"test": "phpunit --no-progress",
+		"test": "phpunit --no-progress --colors=auto",
 		"lint": "phpstan -cphpstan.neon --no-progress",
 		"lint:save": "phpstan -cphpstan.neon --no-progress --generate-baseline=phpstan-errors.neon"
 	},
@@ -36,6 +36,12 @@
 		"test": "Run JSPHP test suite",
 		"lint": "Run JSPHP codebase static analysis",
 		"lint:save": "Run static analysis and save errors result to ignore them in later runs"
+	},
+	"require": {
+    "php": "^7.1 || ^8",
+		"symfony/polyfill-php73": "^1.28",
+		"symfony/polyfill-php80": "^1.28",
+		"symfony/polyfill-php81": "^1.28"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^10.5.2",
@@ -55,7 +61,9 @@
 			"src/JSNumber.php",
 			"src/JSON.php",
 			"src/JSString.php",
-			"src/Math.php"
+			"src/Math.php",
+      "src/undefined.php",
+      "src/JSObject.php"
 		]
 	},
 	"autoload-dev": {

@@ -3,8 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd"
   bootstrap="vendor/autoload.php"
-  cacheDirectory=".phpunit.cache"
-  colors="true">
+  cacheDirectory=".phpunit.cache">
   <testsuites>
     <testsuite name="default">
       <directory>tests</directory>
