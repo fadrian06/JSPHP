@@ -1,0 +1,3 @@
+<?php
+
+const undefined = null;
