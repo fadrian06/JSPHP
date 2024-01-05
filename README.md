@@ -1,6 +1,6 @@
 # Wait... JS and PHP? How's that?
 
-> Nota: Esta documentación está siendo traducida: [> Ver en español](LEAME.md)
+> Nota: Esta documentación está siendo traducida: [> Ver en español](https://github.com/fadrian06/JSPHP/blob/docs/LEAME.md)
 
 📚 JSPHP is a powerful PHP library that provides a set of classes designed to mimic the behavior of **JavaScript's primitive classes** such as Number, String, and more.
 

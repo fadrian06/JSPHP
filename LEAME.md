@@ -1,6 +1,6 @@
 # Espera... ¿JS y PHP? ¿Cómo es eso?
 
-> Note: This documentation is translated to english: [> See it in english](README.md)
+> Note: This documentation is translated to english: [> See it in english](https://github.com/fadrian06/JSPHP/blob/docs/README.md)
 
 📚 JSPHP es una poderosa biblioteca de PHP que provee un conjunto de clases diseñadas
 para imitar el comportamiento de **las clases de los primitivos en JavaScript** como
@@ -12,11 +12,11 @@ JavaScript y sus funcionalidades en sus proyectos de PHP. 🌈
 Esta biblioteca apunta a ser un puente entre JavaScript y PHP, permitiéndoles a los
 desarrolladores escribir código más limpio y más eficiente.
 
-> **✨ Sin importar si eres un desarrollador en PHP que busca explorar características
-> **parecidas a las de JavaScript o un desarrollador en JavaScript trabajando con
-> **PHP, JSPHP es la herramienta perfecta para mejorar tu experiencia de desarrollo. 💪
+> **✨ Sin importar si eres un desarrollador en PHP que busca explorar características**
+> **parecidas a las de JavaScript o un desarrollador en JavaScript trabajando con**
+> **PHP, JSPHP es la herramienta perfecta para mejorar tu experiencia de desarrollo. 💪**
 >
-> **¡Dale a tus proyectos de PHP un toque de JavaScript con JSPHP! 🚀
+> **¡Dale a tus proyectos de PHP un toque de JavaScript con JSPHP! 🚀**
 
 ## Requisitos
 
@@ -26,12 +26,12 @@ desarrolladores escribir código más limpio y más eficiente.
 
 🚀 ¡Empezar a usar JSPHP es super fácil! Sólo sigue estos simples pasos:
 
-**1- Primero, instala JSPHP usando composer:
+**1- Primero, instala JSPHP usando composer:**
 ```bash
 composer require faslatam/jsphp:dev-main
 ```
 
-**2. Incluye el autocargador de composer:
+**2. Incluye el autocargador de composer:**
 ```php
 <?php
 
