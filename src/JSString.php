@@ -6,21 +6,28 @@
  * @property-read int $length Returns the length of a String object.
  */
 final class JSString implements Stringable {
-  private int $length;
+  /** @var int */
+  private $length = 0;
 
-  function __construct(private string $value = '') {
-    $this->length = mb_strlen($value);
+  /** @var string */
+  private $value = '';
+
+  function __construct(string $value = '') {
+    $this->value = $value;
+    $this->length = (int) mb_strlen($this->value);
   }
 
   function __toString(): string {
     return $this->value;
   }
 
+  /** @param 'length' $name Property name */
   function __get(string $name): ?int {
-    return match ($name) {
-      'length' => $this->length,
-      default => null
-    };
+    if ($name === 'length') {
+      return $this->length;
+    }
+
+    return null;
   }
 
   /** Converts all the alphabetic characters in a string to uppercase. */

@@ -13,13 +13,18 @@ abstract class JSON {
   /**
    * Converts a JavaScript Object Notation (JSON) string into an object.
    * @param string $text A valid JSON string.
-   * @param ?Closure(string $key, mixed $value, object $parsed): mixed $reviver A function that transforms the results. This function
-   * is called for each member of the object. If a member contains nested objects,
-   * the nested objects are transformed before the parent object is.
-   * @throws JsonException
+   * @param ?Closure(string $key, mixed $value, object $parsed): mixed $reviver
+   * A function that transforms the results. This function is called for each member
+   * of the object. If a member contains nested objects, the nested objects are
+   * transformed before the parent object is.
+   * @throws JsonException For invalid JSON Strings
    */
   final static function parse(string $text, ?callable $reviver = null): mixed {
-    $result = json_decode($text, flags: JSON_THROW_ON_ERROR);
+    $result = json_decode($text);
+
+    if (json_last_error() !== JSON_ERROR_NONE) {
+      throw new JsonException(json_last_error_msg());
+    }
 
     if ($reviver !== null) {
       $result = (object) $result;
