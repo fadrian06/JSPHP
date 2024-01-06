@@ -53,12 +53,14 @@ JSPHP está dividido en componentes que son equivalentes a clases de JS. Algunos
 componentes están en desarrollo, siéntete libre de contribuir añadiendo
 funcionalidades extras.
 
-| Componente    | Estado                   |
-|---------------|--------------------------|
-| [JSON]()      | ℹ️ _(en desarrollo)_     |
-| [Math]()      | ℹ️ _(en desarrollo)_     |
-| [JSString]()  | ℹ️ _(en desarrollo)_     |
-| [JSNumber]()  | ❌ _(no implementado)_   |
-| [JSArray]()   | ❌ _(no implementado)_   |
-| [JSObject]()  | ❌ _(no implementado)_   |
-| [undefined]() | ✅ _(terminado)_         |
+> [> Ver documentación](https://fadrian06.github.io/JSPHP/)
+
+| Componente                                                              | Estado                   |
+|-------------------------------------------------------------------------|--------------------------|
+| [JSON](https://fadrian06.github.io/JSPHP/classes/JSON.html)             | ℹ️ _(en desarrollo)_     |
+| [Math](https://fadrian06.github.io/JSPHP/classes/Math.html)             | ℹ️ _(en desarrollo)_     |
+| [JSString](https://fadrian06.github.io/JSPHP/classes/JSString.html)     | ℹ️ _(en desarrollo)_     |
+| [JSNumber]()                                                            | ❌ _(no implementado)_   |
+| [JSArray]()                                                             | ❌ _(no implementado)_   |
+| [JSObject]()                                                            | ❌ _(no implementado)_   |
+| [undefined](https://fadrian06.github.io/JSPHP/files/src-undefined.html) | ✅ _(terminado)_         |
