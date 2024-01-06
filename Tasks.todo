@@ -43,7 +43,7 @@ JSPHP:
       ☐ String.slice()
       ☐ String.split()
       ☐ String.startsWith()
-      ☐ String.substring()
+      ✔ String.substring() @done (06/01/2024 16:00:51)
       ☐ String.toLocaleLowerCase()
       ☐ String.toLocaleUpperCase()
       ✔ String.toLowerCase() @done (6/12/2023, 0:45:36)

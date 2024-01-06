@@ -65,6 +65,42 @@ final class JSString implements Stringable {
   }
 
   /**
+   * Returns the substring at the specified location within a String object.
+   * @param int $start The zero-based index number indicating the beginning of the substring.
+   * @param ?int $end Zero-based index number indicating the end of the substring. The substring includes the characters up to, but not including, the character indicated by end.
+   * If end is omitted, the characters from start through the end of the original string are returned.
+   */
+  function substring(int $start, ?int $end = null): self {
+    $result = '';
+
+    if ($end === null) {
+      $end = $this->length;
+    }
+
+    if ($start < 0) {
+      $start = 0;
+    }
+
+    if ($end < 0) {
+      $end = 0;
+    }
+
+    if ($start > $end) {
+      return $this->substring($end, $start);
+    }
+
+    for ($i = $start; $i < $end; ++$i) {
+      if (!isset($this->value[$i])) {
+        break;
+      }
+
+      $result .= $this->value[$i];
+    }
+
+    return new self($result);
+  }
+
+  /**
    * Returns the character at the specified index.
    * @param int|float $pos The zero-based index of the desired character.
    */
