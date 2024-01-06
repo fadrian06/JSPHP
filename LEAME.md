@@ -28,7 +28,7 @@ desarrolladores escribir código más limpio y más eficiente.
 
 **1- Primero, instala JSPHP usando composer:**
 ```bash
-composer require faslatam/jsphp:dev-main
+composer require faslatam/jsphp
 ```
 
 **2. Incluye el autocargador de composer:**

@@ -22,7 +22,7 @@ This library aims to bridge the gap between JavaScript and PHP, allowing develop
 
 **1- First, install JSPHP using composer:**
 ```bash
-composer require faslatam/jsphp:dev-main
+composer require faslatam/jsphp
 ```
 
 **2. Include the composer autoloader:**
