@@ -22,7 +22,7 @@ This library aims to bridge the gap between JavaScript and PHP, allowing develop
 
 **1- First, install JSPHP using composer:**
 ```bash
-composer require faslatam/jsphp:dev-main
+composer require faslatam/jsphp
 ```
 
 **2. Include the composer autoloader:**
@@ -46,12 +46,14 @@ echo $user->name; # Output: foo
 JSPHP is divided in components that are equivalent to JS classes. Some components
 are under development, feel free to contribute adding extra functionalities.
 
-| Component     | Status                   |
-|---------------|--------------------------|
-| [JSON]()      | ℹ️ _(under development)_ |
-| [Math]()      | ℹ️ _(under development)_ |
-| [JSString]()  | ℹ️ _(under development)_ |
-| [JSNumber]()  | ❌ _(unimplement)_       |
-| [JSArray]()   | ❌ _(unimplement)_       |
-| [JSObject]()  | ❌ _(unimplement)_       |
-| [undefined]() | ✅ _(finished)_          |
+> [> See documentation](https://fadrian06.github.io/JSPHP/)
+
+| Component                                                               | Status                   |
+|-------------------------------------------------------------------------|--------------------------|
+| [JSON](https://fadrian06.github.io/JSPHP/classes/JSON.html)             | ℹ️ _(under development)_ |
+| [Math](https://fadrian06.github.io/JSPHP/classes/Math.html)             | ℹ️ _(under development)_ |
+| [JSString](https://fadrian06.github.io/JSPHP/classes/JSString.html)     | ℹ️ _(under development)_ |
+| [JSNumber]()                                                            | ❌ _(unimplement)_       |
+| [JSArray]()                                                             | ❌ _(unimplement)_       |
+| [JSObject]()                                                            | ❌ _(unimplement)_       |
+| [undefined](https://fadrian06.github.io/JSPHP/files/src-undefined.html) | ✅ _(finished)_          |

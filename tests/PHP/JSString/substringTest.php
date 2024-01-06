@@ -7,8 +7,6 @@ namespace Tests\PHP\JSString;
 use JSString;
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../../../vendor/autoload.php';
-
 final class substringTest extends TestCase {
   function test_Demo_String_substring(): void {
     $str = String('Mozilla');
