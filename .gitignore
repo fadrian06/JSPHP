@@ -9,3 +9,5 @@ jsphp.sublime-workspace
 .coverage
 node_modules
 package-lock.json
+phpDocumentor.phar
+.phpdoc
