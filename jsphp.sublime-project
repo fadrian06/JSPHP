@@ -53,7 +53,10 @@
     {
       "name": "Coverage",
       "shell_cmd": "composer coverage -- --colors=never",
-      "quiet": true
+      "quiet": true,
     }
   ],
+  "debugger_configurations":
+  [
+	],
 }

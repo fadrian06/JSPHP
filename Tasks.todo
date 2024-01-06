@@ -7,14 +7,17 @@ JSPHP:
         ☐ Array and object coercion
       ✔ Characters access with array access syntax @done (23-12-10 21:23)
       ✔ Return null for negative and out of range indexes @done (30/12/2023 16:46:07)
+      ✘ Support for string iterator that is used here iterates over characters ([...$string] requires PHP ^7.4) @cancelled (06/01/2024 01:32:42)
+      ✘ Concatenate using the + and += string operators (use . and .= instead) @cancelled (06/01/2024 01:32:07)
     ☐ Static methods
       ☐ String.fromCharCode()
       ☐ String.fromCodePoint()
       ☐ String.raw()
-    ✔ Instance properties @done (05/01/2024 14:35:21)
-      ✔ length property @done (23-12-30 14:43)
+    ☐ Instance properties
+      ☐ length property
         ✔ Readonly constraint to length property @done (30/12/2023 16:37:49)
           ✔ Don't throw an error when attempt to reassign length property @done (30/12/2023 16:37:48)
+        ☐ Emojis must have 2 code points (utf-8 have 4 points, but utf-16 have 2, but utf-16 reduce a half of every unicode character) @low
     ☐ Instance methods
       ☐ String.at()
       ☐ String.charAt()
@@ -23,7 +26,8 @@ JSPHP:
       ☐ String.concat()
       ☐ String.endsWith()
       ☐ String.includes()
-      ☐ String.indexOf()
+      ✔ String.indexOf() @done (06/01/2024 03:00:36)
+        ✔ When $searchString param be null or undefined, use 'undefined' @done (06/01/2024 02:03:07)
       ☐ String.isWellFormed()
       ☐ String.lastIndexOf()
       ☐ String.localeCompare()
@@ -39,7 +43,7 @@ JSPHP:
       ☐ String.slice()
       ☐ String.split()
       ☐ String.startsWith()
-      ☐ String.substring()
+      ✔ String.substring() @done (06/01/2024 16:00:51)
       ☐ String.toLocaleLowerCase()
       ☐ String.toLocaleUpperCase()
       ✔ String.toLowerCase() @done (6/12/2023, 0:45:36)
@@ -231,7 +235,8 @@ JSPHP:
   Global functions:
     ☐ parseInt()
     ☐ parseFloat()
-
+  Extras:
+    ☐ 'use strict'
 Tests:
   ☐ Write all javaScript tests
   ☐ Test against unexpected argument types on all classes
