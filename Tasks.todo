@@ -52,17 +52,100 @@ JSPHP:
       ✔ String.valueOf() @done (23-12-30 16:12)
   --- ✄ -----------------------
   JSRegExp:
+    ☐ Instance properties
+      ☐ RegExp.dotAll
+      ☐ RegExp.flags
+      ☐ RegExp.global
+      ☐ RegExp.hasIndices
+      ☐ RegExp.ignoreCase
+      ☐ RegExp.multiline
+      ☐ RegExp.source
+      ☐ RegExp.sticky
+      ☐ RegExp.unicode
+      ☐ RegExp.unicodeSets
+      ☐ RegExp.lastIndex
+    ☐ Instance methods
+      ☐ RegExp.exec()
+      ☐ RegExp.test()
+      ☐ RegExp.toString()
   --- ✄ -----------------------
   JSNumber:
+    ☐ Static properties
+      ☐ Number.EPSILON
+      ☐ Number.MAX_SAFE_INTEGER
+      ☐ Number.MAX_VALUE
+      ☐ Number.MIN_SAFE_INTEGER
+      ☐ Number.NEGATIVE_INFINITY
+      ☐ Number.POSITIVE_INFINITY
+    ☐ Static methods
+      ☐ Number.isFinite()
+      ☐ Number.isInteger()
+      ☐ Number.isNaN()
+      ☐ Number.isSafeInteger()
+      ☐ Number.parseFloat()
+      ☐ Number.parseInt()
+    ☐ Instance methods
+      ☐ Number.toExponential()
+      ☐ Number.toFixed()
+      ☐ Number.toLocaleString()
+      ☐ Number.toPrecision()
+      ☐ Number.toString()
+      ☐ Number.valueOf()
   --- ✄ -----------------------
   JSArray:
+    ☐ Core behaviour
+      ☐ Posibility of add items and support different data types, (like a PHP Array)
+      ☐ Support for access elements with an non negative integer index
+        ☐ Integers as a string must be accepted too
+      ☐ Support for zero-indexed (like a Python list)
+      ☐ Support for shallow copies
+    ☐ Static methods
+      ☐ Array.from()
+      ☐ Array.fromAsync()
+      ☐ Array.isArray()
+      ☐ Array.of()
+    ☐ Instance properties
+      ☐ Array.length
+        ☐ Posibility of change the length property and create undefined slots or delete elements if it's necessary
     ☐ Instance methods
-      ☐ Array.forEach()
-      ☐ Array.map()
-      ☐ Array.filter()
-      ☐ Array.reduce()
-      ☐ Array.join()
+      ☐ Array.at()
       ☐ Array.concat()
+      ☐ Array.copyWithin()
+      ☐ Array.entries()
+      ☐ Array.every()
+      ☐ Array.fill()
+      ☐ Array.filter()
+      ☐ Array.find()
+      ☐ Array.findIndex()
+      ☐ Array.findLast()
+      ☐ Array.findLastIndex()
+      ☐ Array.flat()
+      ☐ Array.flatMap()
+      ☐ Array.forEach()
+      ☐ Array.includes()
+      ☐ Array.indexOf()
+      ☐ Array.join()
+      ☐ Array.keys()
+      ☐ Array.lastIndexOf()
+      ☐ Array.map()
+      ☐ Array.pop()
+      ☐ Array.push()
+      ☐ Array.reduce()
+      ☐ Array.reduceRight()
+      ☐ Array.reverse()
+      ☐ Array.shift()
+      ☐ Array.slice()
+      ☐ Array.some()
+      ☐ Array.sort()
+      ☐ Array.splice()
+      ☐ Array.toLocaleString()
+      ☐ Array.toReversed()
+      ☐ Array.toSorted()
+      ☐ Array.toSpliced()
+      ☐ Array.toString()
+      ☐ Array.unshift()
+      ☐ Array.values()
+      ☐ Array.with()
   --- ✄ -----------------------
   JSON:
     ☐ Core behaviour
@@ -78,22 +161,80 @@ JSPHP:
   Math:
     ✔ Core behaviour @done (05/01/2024 14:41:14)
       ✔ Make class no instantiable @done (05/01/2024 14:41:09)
+    ☐ Static properties
+      ☐ Math.E
+      ☐ Math.LN10
+      ☐ Math.LN2
+      ☐ Math.LOG10E
+      ☐ Math.LOG2E
+      ☐ Math.PI
+      ☐ Math.SQRT1_2
+      ☐ Math.SQRT2
     ☐ Static methods
-      ☐ Math.random()
       ☐ Math.abs()
-        ☐ Test abs() method
+      ☐ Math.acos()
+      ☐ Math.acosh()
+      ☐ Math.asin()
+      ☐ Math.asinh()
+      ☐ Math.atan()
+      ☐ Math.atan2()
+      ☐ Math.cbrt()
+      ☐ Math.ceil()
+      ☐ Math.clz32()
+      ☐ Math.cos()
+      ☐ Math.cosh()
+      ☐ Math.exp()
+      ☐ Math.expm1()
+      ☐ Math.floor()
+      ☐ Math.fround()
+      ☐ Math.fmul()
+      ☐ Math.log()
+      ☐ Math.log10()
+      ☐ Math.log1p()
+      ☐ Math.log2()
+      ☐ Math.max()
+      ☐ Math.min()
+      ☐ Math.pow()
+      ☐ Math.random()
+      ☐ Math.round()
+      ☐ Math.sign()
+      ☐ Math.sin()
+      ☐ Math.sinh()
+      ☐ Math.sqrt()
+      ☐ Math.tan()
+      ☐ Math.tanh()
+      ☐ Math.trunc()
   --- ✄ -----------------------
   console:
-    ☐ Static methods
-      ☐ console.log()
-      ☐ console.info()
+    ☐ Instance methods
+      ☐ console.assert()
+      ☐ console.clear()
+      ☐ console.count()
+      ☐ console.countReset()
+      ☐ console.debug()
+      ☐ console.dir()
+      ☐ console.dirxml()
       ☐ console.error()
+      ☐ console.group()
+      ☐ console.groupCollapsed()
+      ☐ console.groupEnd()
+      ☐ console.info()
+      ☐ console.log()
       ☐ console.table()
+      ☐ console.time()
+      ☐ console.timeEnd()
+      ☐ console.timeLog()
+      ☐ console.trace()
+      ☐ console.warn()
   --- ✄ -----------------------
   ✔ undefined constant @done (23-12-10 21:20)
+  Global functions:
+    ☐ parseInt()
+    ☐ parseFloat()
 
 Tests:
   ☐ Write all javaScript tests
   ☐ Test against unexpected argument types on all classes
   ✔ Test toLowerCase() @done (30/12/2023 16:47:45)
   ✔ Test toUpperCase() @done (30/12/2023 16:47:44)
+  ☐ Test abs() method

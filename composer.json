@@ -46,6 +46,7 @@
 		"symfony/polyfill-php81": "^1.28"
 	},
 	"require-dev": {
+    "php": "^8",
 		"phpunit/phpunit": "^10.5",
 		"phpstan/phpstan": "^1.10",
 		"phpstan/extension-installer": "^1.3",
