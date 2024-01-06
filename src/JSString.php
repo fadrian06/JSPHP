@@ -14,7 +14,7 @@ final class JSString implements Stringable {
 
   function __construct(string $value = '') {
     $this->value = $value;
-    $this->length = (int) mb_strlen($this->value);
+    $this->length = (int) mb_strlen($this->value, 'utf-8');
   }
 
   function __toString(): string {
@@ -28,6 +28,48 @@ final class JSString implements Stringable {
     }
 
     return null;
+  }
+
+  /** @param mixed $value */
+  function __set(string $name, $value): void {
+  }
+
+  /**
+   * Returns the position of the first occurrence of a substring.
+   * @param ?string $searchString The substring to search for in the string
+   * @param int<0, max> $position The index at which to begin searching the String object. If omitted, search starts at the beginning of the string.
+   * @return int The index of the first occurrence of searchString found, or -1 if not found.
+   */
+  function indexOf(?string $searchString = null, int $position = 0): int {
+    if ($searchString === '' && $position >= $this->length) {
+      return $this->length;
+    } elseif ($searchString === '') {
+      return $position;
+    }
+
+    if ($searchString === null) {
+      $searchString = 'undefined';
+    }
+
+    if ($position >= $this->length) {
+      return -1;
+    }
+
+    if ($position < 0) {
+      $position = 0;
+    }
+
+    $position = mb_strpos($this->value, $searchString, $position, 'utf-8');
+
+    return $position === false ? -1 : $position;
+  }
+
+  /**
+   * Returns the character at the specified index.
+   * @param int|float $pos The zero-based index of the desired character.
+   */
+  function charAt($pos): self {
+    return new self($this->value[$pos]);
   }
 
   /** Converts all the alphabetic characters in a string to uppercase. */
