@@ -2,17 +2,26 @@
 
 declare(strict_types=1);
 
+use JSPHP\Prototypes\ArrayPrototype;
+
 /**
  * @template T of mixed
  * @property int $length Gets or sets the length of the array. This is a number one higher than the highest index in the array.
  * @implements ArrayAccess<int<0, 4294967296>, T>
+ * @implements Iterator<int<0, 4294967296>, T>
  */
-final class JSArray implements Stringable, ArrayAccess {
+final class JSArray implements Stringable, ArrayAccess, Iterator {
+  /** @var int */
+  private $position = 0;
+
   /** @var int */
   private $length = 0;
 
   /** @var array<int, ?T> */
   private $items = [];
+
+  /** @var ?ArrayPrototype */
+  private static $prototype = null;
 
   /**
    * @param ?int $arrayLength
@@ -71,10 +80,21 @@ final class JSArray implements Stringable, ArrayAccess {
     }
   }
 
-  // TODO: Implement JS array methods
   function __toString(): string {
-    // TODO: Implement toString()
-    return '';
+    return join(',', $this->items);
+  }
+
+  static function prototype(): ArrayPrototype {
+    if (self::$prototype === null) {
+      self::$prototype = new ArrayPrototype;
+    }
+
+    return self::$prototype;
+  }
+
+  /** @param mixed $arg */
+  static function isArray($arg): bool {
+    return is_array($arg) || $arg instanceof self;
   }
 
   /**
@@ -90,8 +110,22 @@ final class JSArray implements Stringable, ArrayAccess {
     }
 
     foreach ($this->items as $index => $value) {
+      if ($value === null) {
+        continue;
+      }
+
       $callbackfn($value, $index, $this);
     }
+  }
+
+  /**
+   * Appends new elements to the end of an array, and returns the new length of the array.
+   * @param T ...$items New elements to add to the array.
+   */
+  function push(...$items): int {
+    $this->length = array_push($this->items, ...$items);
+
+    return $this->length;
   }
 
   /**
@@ -100,6 +134,11 @@ final class JSArray implements Stringable, ArrayAccess {
    */
   function values(): array {
     return $this->items;
+  }
+
+  /** Returns a string representation of an array. */
+  function toString(): string {
+    return (string) $this;
   }
 
   /** @param int<0, 4294967296> $offset */
@@ -126,6 +165,32 @@ final class JSArray implements Stringable, ArrayAccess {
   function offsetUnset($offset): void {
     unset($this->items[$offset]);
     $this->length--;
+  }
+
+  /** @return ?T */
+  #[ReturnTypeWillChange]
+  function current() {
+    return $this->items[$this->position];
+  }
+
+  function next(): void {
+    $this->position++;
+  }
+
+  #[ReturnTypeWillChange]
+  function key(): int {
+    /** @var int<0, 4294967296> */
+    $position = $this->position;
+
+    return $position;
+  }
+
+  function valid(): bool {
+    return isset($this->items[$this->position]);
+  }
+
+  function rewind(): void {
+    $this->position = 0;
   }
 }
 

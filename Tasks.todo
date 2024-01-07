@@ -125,7 +125,7 @@ JSPHP:
       ☐ Array.findLastIndex()
       ☐ Array.flat()
       ☐ Array.flatMap()
-      ☐ Array.forEach()
+      ✔ Array.forEach() @done (07/01/2024 00:26:33)
       ☐ Array.includes()
       ☐ Array.indexOf()
       ☐ Array.join()
@@ -150,6 +150,10 @@ JSPHP:
       ☐ Array.unshift()
       ☐ Array.values()
       ☐ Array.with()
+  --- ✄ -----------------------
+  JSFunction:
+  --- ✄ -----------------------
+  JSObject:
   --- ✄ -----------------------
   JSON:
     ☐ Core behaviour

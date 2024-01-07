@@ -4,8 +4,9 @@
  * @template T of mixed
  * @property int $length Gets or sets the length of the array. This is a number one higher than the highest index in the array.
  * @implements ArrayAccess<int<0, 4294967296>, T>
+ * @implements Iterator<int<0, 4294967296>, T>
  */
-final class JSArray implements Stringable, ArrayAccess {
+final class JSArray implements Stringable, ArrayAccess, Iterator {
   function __construct(int $arrayLength) {
   }
 
@@ -29,6 +30,22 @@ final class JSArray implements Stringable, ArrayAccess {
   }
 
   function offsetUnset($offset): void {
+  }
+
+  function current() {
+  }
+
+  function next(): void {
+  }
+
+  function key() {
+  }
+
+  function valid(): bool {
+    return false;
+  }
+
+  function rewind(): void {
   }
 }
 

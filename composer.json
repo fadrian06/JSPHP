@@ -66,10 +66,15 @@
       "src/JSNumber.php",
       "src/JSON.php",
       "src/JSString.php",
+      "src/JSObject.php",
+      "src/JSFunction.php",
       "src/Math.php",
       "src/undefined.php",
-      "src/JSObject.php"
-    ]
+      "src/console.php"
+    ],
+    "psr-4": {
+      "JSPHP\\": "src"
+    }
   },
   "autoload-dev": {
     "psr-4": {
