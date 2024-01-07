@@ -1,15 +1,155 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\console",
+            "name": "console",
+            "summary": "",
+            "url": "classes/console.html"
+        },                {
+            "fqsen": "\\console\u003A\u003Alog\u0028\u0029",
+            "name": "log",
+            "summary": "",
+            "url": "classes/console.html#method_log"
+        },                {
+            "fqsen": "\\JSArray\u0028\u0029",
+            "name": "JSArray",
+            "summary": "",
+            "url": "namespaces/default.html#function_JSArray"
+        },                {
             "fqsen": "\\JSArray",
             "name": "JSArray",
             "summary": "",
             "url": "classes/JSArray.html"
         },                {
+            "fqsen": "\\JSArray\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/JSArray.html#method___construct"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003A__get\u0028\u0029",
+            "name": "__get",
+            "summary": "",
+            "url": "classes/JSArray.html#method___get"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003A__set\u0028\u0029",
+            "name": "__set",
+            "summary": "",
+            "url": "classes/JSArray.html#method___set"
+        },                {
             "fqsen": "\\JSArray\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
             "summary": "",
             "url": "classes/JSArray.html#method___toString"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003A\u0024prototype",
+            "name": "prototype",
+            "summary": "",
+            "url": "classes/JSArray.html#property_prototype"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AisArray\u0028\u0029",
+            "name": "isArray",
+            "summary": "",
+            "url": "classes/JSArray.html#method_isArray"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AforEach\u0028\u0029",
+            "name": "forEach",
+            "summary": "Performs\u0020the\u0020specified\u0020action\u0020for\u0020each\u0020element\u0020in\u0020an\u0020array.",
+            "url": "classes/JSArray.html#method_forEach"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Apush\u0028\u0029",
+            "name": "push",
+            "summary": "Appends\u0020new\u0020elements\u0020to\u0020the\u0020end\u0020of\u0020an\u0020array,\u0020and\u0020returns\u0020the\u0020new\u0020length\u0020of\u0020the\u0020array.",
+            "url": "classes/JSArray.html#method_push"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Avalues\u0028\u0029",
+            "name": "values",
+            "summary": "Returns\u0020an\u0020iterable\u0020of\u0020values\u0020in\u0020the\u0020array",
+            "url": "classes/JSArray.html#method_values"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AtoString\u0028\u0029",
+            "name": "toString",
+            "summary": "Returns\u0020a\u0020string\u0020representation\u0020of\u0020an\u0020array.",
+            "url": "classes/JSArray.html#method_toString"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AoffsetExists\u0028\u0029",
+            "name": "offsetExists",
+            "summary": "",
+            "url": "classes/JSArray.html#method_offsetExists"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AoffsetGet\u0028\u0029",
+            "name": "offsetGet",
+            "summary": "",
+            "url": "classes/JSArray.html#method_offsetGet"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AoffsetSet\u0028\u0029",
+            "name": "offsetSet",
+            "summary": "",
+            "url": "classes/JSArray.html#method_offsetSet"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003AoffsetUnset\u0028\u0029",
+            "name": "offsetUnset",
+            "summary": "",
+            "url": "classes/JSArray.html#method_offsetUnset"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Acurrent\u0028\u0029",
+            "name": "current",
+            "summary": "",
+            "url": "classes/JSArray.html#method_current"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Anext\u0028\u0029",
+            "name": "next",
+            "summary": "",
+            "url": "classes/JSArray.html#method_next"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Akey\u0028\u0029",
+            "name": "key",
+            "summary": "",
+            "url": "classes/JSArray.html#method_key"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Avalid\u0028\u0029",
+            "name": "valid",
+            "summary": "",
+            "url": "classes/JSArray.html#method_valid"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003Arewind\u0028\u0029",
+            "name": "rewind",
+            "summary": "",
+            "url": "classes/JSArray.html#method_rewind"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003A\u0024position",
+            "name": "position",
+            "summary": "",
+            "url": "classes/JSArray.html#property_position"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003A\u0024length",
+            "name": "length",
+            "summary": "",
+            "url": "classes/JSArray.html#property_length"
+        },                {
+            "fqsen": "\\JSArray\u003A\u003A\u0024items",
+            "name": "items",
+            "summary": "",
+            "url": "classes/JSArray.html#property_items"
+        },                {
+            "fqsen": "\\JSFunction",
+            "name": "JSFunction",
+            "summary": "",
+            "url": "classes/JSFunction.html"
+        },                {
+            "fqsen": "\\JSFunction\u003A\u003A__set\u0028\u0029",
+            "name": "__set",
+            "summary": "",
+            "url": "classes/JSFunction.html#method___set"
+        },                {
+            "fqsen": "\\JSFunction\u003A\u003Acall\u0028\u0029",
+            "name": "call",
+            "summary": "Calls\u0020a\u0020method\u0020of\u0020an\u0020object,\u0020substituting\u0020another\u0020object\u0020for\u0020the\u0020current\u0020object.",
+            "url": "classes/JSFunction.html#method_call"
+        },                {
+            "fqsen": "\\JSFunction\u003A\u003A\u0024prototype",
+            "name": "prototype",
+            "summary": "",
+            "url": "classes/JSFunction.html#property_prototype"
         },                {
             "fqsen": "\\JSNumber",
             "name": "JSNumber",
@@ -28,7 +168,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\JSON",
             "name": "JSON",
-            "summary": "",
+            "summary": "An\u0020intrinsic\u0020object\u0020that\u0020provides\u0020functions\u0020to\u0020convert\u0020JavaScript\u0020values\u0020to\u0020and\nfrom\u0020the\u0020JavaScript\u0020Object\u0020Notation\u0020\u0028JSON\u0029\u0020format.",
             "url": "classes/JSON.html"
         },                {
             "fqsen": "\\JSON\u003A\u003A__construct\u0028\u0029",
@@ -196,6 +336,26 @@ Search.appendIndex(
             "summary": "Converts\u0020a\u0020PHP\u0020value\u0020to\u0020a\u0020JavaScript\u0020Object\u0020Notation\u0020\u0028JSON\u0029\u0020string.",
             "url": "classes/JSON.html#method_stringify"
         },                {
+            "fqsen": "\\JSPHP\\Prototypes\\ArrayPrototype",
+            "name": "ArrayPrototype",
+            "summary": "",
+            "url": "classes/JSPHP-Prototypes-ArrayPrototype.html"
+        },                {
+            "fqsen": "\\JSPHP\\Prototypes\\ArrayPrototype\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/JSPHP-Prototypes-ArrayPrototype.html#method___construct"
+        },                {
+            "fqsen": "\\JSPHP\\Prototypes\\ArrayPrototype\u003A\u003A__get\u0028\u0029",
+            "name": "__get",
+            "summary": "",
+            "url": "classes/JSPHP-Prototypes-ArrayPrototype.html#method___get"
+        },                {
+            "fqsen": "\\JSPHP\\Prototypes\\ArrayPrototype\u003A\u003A\u0024forEach",
+            "name": "forEach",
+            "summary": "",
+            "url": "classes/JSPHP-Prototypes-ArrayPrototype.html#property_forEach"
+        },                {
             "fqsen": "\\undefined",
             "name": "undefined",
             "summary": "",
@@ -205,5 +365,15 @@ Search.appendIndex(
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
+        },                {
+            "fqsen": "\\JSPHP\\Prototypes",
+            "name": "Prototypes",
+            "summary": "",
+            "url": "namespaces/jsphp-prototypes.html"
+        },                {
+            "fqsen": "\\JSPHP",
+            "name": "JSPHP",
+            "summary": "",
+            "url": "namespaces/jsphp.html"
         }            ]
 );
