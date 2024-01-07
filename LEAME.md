@@ -76,6 +76,6 @@ funcionalidades extras.
 | [Math](https://fadrian06.github.io/JSPHP/classes/Math.html)             | ℹ️ _(en desarrollo)_     |
 | [JSString](https://fadrian06.github.io/JSPHP/classes/JSString.html)     | ℹ️ _(en desarrollo)_     |
 | [JSNumber]()                                                            | ❌ _(no implementado)_   |
-| [JSArray]()                                                             | ❌ _(no implementado)_   |
+| [JSArray]()                                                             | ℹ️ _(en desarrollo)_     |
 | [JSObject]()                                                            | ❌ _(no implementado)_   |
 | [undefined](https://fadrian06.github.io/JSPHP/files/src-undefined.html) | ✅ _(terminado)_         |

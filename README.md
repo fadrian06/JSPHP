@@ -69,6 +69,6 @@ are under development, feel free to contribute adding extra functionalities.
 | [Math](https://fadrian06.github.io/JSPHP/classes/Math.html)             | ℹ️ _(under development)_ |
 | [JSString](https://fadrian06.github.io/JSPHP/classes/JSString.html)     | ℹ️ _(under development)_ |
 | [JSNumber]()                                                            | ❌ _(unimplement)_       |
-| [JSArray]()                                                             | ❌ _(unimplement)_       |
+| [JSArray]()                                                             | ℹ️ _(under development)_ |
 | [JSObject]()                                                            | ❌ _(unimplement)_       |
 | [undefined](https://fadrian06.github.io/JSPHP/files/src-undefined.html) | ✅ _(finished)_          |
