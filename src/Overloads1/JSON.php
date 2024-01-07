@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+/**
+ * An intrinsic object that provides functions to convert JavaScript values to and
+ * from the JavaScript Object Notation (JSON) format.
+ */
 abstract class JSON {
   /**
    * Converts a PHP value to a JavaScript Object Notation (JSON) string.

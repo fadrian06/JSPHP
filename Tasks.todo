@@ -108,9 +108,9 @@ JSPHP:
       ☐ Array.fromAsync()
       ☐ Array.isArray()
       ☐ Array.of()
-    ☐ Instance properties
-      ☐ Array.length
-        ☐ Posibility of change the length property and create undefined slots or delete elements if it's necessary
+    ✔ Instance properties @done (06/01/2024 21:53:09)
+      ✔ Array.length @done (06/01/2024 21:53:09)
+        ✔ Posibility of change the length property and create undefined slots or delete elements if it's necessary @done (06/01/2024 21:53:08)
     ☐ Instance methods
       ☐ Array.at()
       ☐ Array.concat()

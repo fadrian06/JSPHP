@@ -7,4 +7,7 @@ parameters:
   phpVersion: 70100
   paths:
     - src
+  excludePaths:
+    - src/Overloads1
+    - src/Overloads2
   treatPhpDocTypesAsCertain: false
