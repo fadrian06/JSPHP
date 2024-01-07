@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Allows manipulation and formatting of text strings and determination and
  * location of substrings within strings.

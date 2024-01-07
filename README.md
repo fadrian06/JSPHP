@@ -39,6 +39,21 @@ echo $name->toUpperCase(); # Output: FOO
 $user = JSON::parse('{ "id": 1, "name": "foo" }');
 echo $user->name; # Output: foo
 
+$colors = JSArray(['red', 'purple', 'black']);
+$colors->forEach(function (?string $color): void {
+  echo "I like the color $color\n";
+});
+
+echo "\ncolors = $colors";
+
+/* Output:
+----------
+I like the color red
+I like the color purple
+I like the color black
+
+colors = red,purple,black
+ */
 ```
 
 ## Components
