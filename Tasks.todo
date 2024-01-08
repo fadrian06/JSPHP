@@ -164,20 +164,20 @@ JSPHP:
           ☐ Run the reviver param with keys recursively iteration
         ✔ Create test for other data types (currently only test for strings) @done (4/12/2023, 20:50:09)
       ☐ JSON.stringify()
-        ✔ String.method signature overload for the replacer param @done (23-12-30 14:26)
+        ✔ Method signature overload for the replacer param @done (23-12-30 14:26)
   --- ✄ -----------------------
   Math:
     ✔ Core behaviour @done (05/01/2024 14:41:14)
       ✔ Make class no instantiable @done (05/01/2024 14:41:09)
     ☐ Static properties
-      ☐ Math.E
-      ☐ Math.LN10
-      ☐ Math.LN2
-      ☐ Math.LOG10E
-      ☐ Math.LOG2E
-      ☐ Math.PI
-      ☐ Math.SQRT1_2
-      ☐ Math.SQRT2
+      ✔ Math.E @done (07/01/2024 11:20:16)
+      ✔ Math.LN10 @done (07/01/2024 22:19:17)
+      ✔ Math.LN2 @done (07/01/2024 23:30:09)
+      ✔ Math.LOG10E @done (07/01/2024 23:30:09)
+      ✔ Math.LOG2E @done (07/01/2024 23:30:10)
+      ✔ Math.PI @done (07/01/2024 23:30:10)
+      ✔ Math.SQRT1_2 @done (07/01/2024 23:30:12)
+      ✔ Math.SQRT2 @done (07/01/2024 23:30:13)
     ☐ Static methods
       ☐ Math.abs()
       ☐ Math.acos()
