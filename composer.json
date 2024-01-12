@@ -62,20 +62,19 @@
   },
   "autoload": {
     "files": [
-      "src/JSArray.php",
-      "src/JSNumber.php",
-      "src/JSON.php",
-      "src/JSString.php",
-      "src/JSObject.php",
-      "src/JSFunction.php",
-      "src/JSBoolean.php",
-      "src/Math.php",
-      "src/undefined.php",
-      "src/console.php",
-      "src/Symbol.php",
-      "src/JSDate.php",
+      "src/Globals/JSArray.php",
+      "src/Globals/JSFunction.php",
+      "src/Globals/JSObject.php",
+      "src/Globals/JSString.php",
+      "src/Globals/Number.php",
+      "src/Globals/Boolean.php",
+      "src/Globals/JSON.php",
+      "src/Globals/Math.php",
+      "src/Globals/Date.php",
+      "src/Globals/Symbol.php",
+      "src/constants.php",
       "src/VarDate.php",
-      "src/Infinity.php"
+      "src/DOM/console.php"
     ],
     "psr-4": {
       "JSPHP\\": "src"

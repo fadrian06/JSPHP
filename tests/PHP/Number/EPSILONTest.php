@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\PHP\JSNumber;
+namespace Tests\PHP\Number;
 
-use JSNumber;
 use Math;
+use Number;
 use PHPUnit\Framework\TestCase;
 
 final class EPSILONTest extends TestCase {
@@ -38,7 +38,7 @@ final class EPSILONTest extends TestCase {
     /* In this case, a larger tolerance is required. As the numbers
     compared have a magnitude of approximately 2000, a multiplier such
     as 2000 * JSNumber::EPSILON creates enough tolerance for this instance. */
-    $equal = function (float $x, float $y, $tolerance = JSNumber::EPSILON): bool {
+    $equal = function (float $x, float $y, $tolerance = Number::EPSILON): bool {
       return Math::abs($x - $y) < $tolerance;
     };
 
@@ -46,10 +46,10 @@ final class EPSILONTest extends TestCase {
     $y = 1000.2;
     $z = 2000.3;
 
-    self::assertTrue($equal($x + $y, $z, 2000 * JSNumber::EPSILON));
+    self::assertTrue($equal($x + $y, $z, 2000 * Number::EPSILON));
   }
 
   private static function equal(float $x, float $y): bool {
-    return Math::abs($x - $y) < JSNumber::EPSILON;
+    return Math::abs($x - $y) < Number::EPSILON;
   }
 }

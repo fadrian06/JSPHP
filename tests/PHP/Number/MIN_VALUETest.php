@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\PHP\JSNumber;
+namespace Tests\PHP\Number;
 
-use JSNumber;
+use Number;
 use PHPUnit\Framework\TestCase;
 
 final class MIN_VALUETest extends TestCase {
   function test_Try_it(): void {
     function divide($x, $y) {
-      if ($x / $y < JSNumber::MIN_VALUE) {
+      if ($x / $y < Number::MIN_VALUE) {
         return 'Process as 0';
       }
 

@@ -4,7 +4,7 @@
  * An object that represents a number of any kind. All JavaScript numbers are
  * 64-bit floating-point numbers.
  */
-final class JSNumber {
+final class Number {
   /**
    * The value of JSNumber::EPSILON is the difference between 1 and the smallest value greater than 1
    * that is representable as a Number value, which is approximately:
@@ -70,15 +70,6 @@ final class JSNumber {
  * 64-bit floating-point numbers.
  * @param mixed $value
  */
-function JSNumber($value = null): JSNumber {
-  return new JSNumber($value);
-}
-
-/**
- * An object that represents a number of any kind. All JavaScript numbers are
- * 64-bit floating-point numbers.
- * @param mixed $value
- */
-function Number($value = null): JSNumber {
-  return new JSNumber($value);
+function Number($value = null): Number {
+  return new Number($value);
 }

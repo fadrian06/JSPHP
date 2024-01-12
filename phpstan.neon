@@ -8,8 +8,5 @@ parameters:
   paths:
     - src
   excludePaths:
-    - src/Overloads1
-    - src/Overloads2
-    - src/Overloads3
-    - src/Overloads4
+    - src/Overloads
   treatPhpDocTypesAsCertain: false

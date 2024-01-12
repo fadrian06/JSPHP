@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-final class JSBoolean {
+final class Boolean {
   /** @var bool */
   private $value;
 
@@ -24,4 +24,9 @@ final class JSBoolean {
   function toString(): string {
     return (string) $this;
   }
+}
+
+/** @param mixed $value */
+function Boolean($value): Boolean {
+  return new Boolean($value);
 }

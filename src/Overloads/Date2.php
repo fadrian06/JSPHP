@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-final class JSDate {
+final class Date {
   function __construct(VarDate $vd) {
   }
 }

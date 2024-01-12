@@ -158,3 +158,11 @@ final class JSString implements Stringable {
 function String(string $value = ''): JSString {
   return new JSString($value);
 }
+
+/**
+ * Allows manipulation and formatting of text strings and determination and
+ * location of substrings within strings.
+ */
+function JSString(string $value = ''): JSString {
+  return new JSString($value);
+}

@@ -71,9 +71,9 @@ abstract class JSON {
 
     foreach ($value as &$item) {
       switch (true) {
-        case $item instanceof JSNumber:
         case $item instanceof JSString:
-        case $item instanceof JSBoolean:
+        case $item instanceof Number:
+        case $item instanceof Boolean:
           $item = $item->valueOf();
           break;
         case is_callable($item):

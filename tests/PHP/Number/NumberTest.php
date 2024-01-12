@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\PHP\JSNumber;
+namespace Tests\PHP\Number;
 
 use PHPUnit\Framework\TestCase;
 
-final class JSNumberTest extends TestCase {
+final class NumberTest extends TestCase {
   function test_Description(): void {
     self::assertTrue(Number(255) == Number(255.0));
     self::assertTrue(Number(255) == Number(0xff));

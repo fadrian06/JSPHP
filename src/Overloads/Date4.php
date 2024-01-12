@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-final class JSDate {
+final class Date {
   /**
    * Creates a new Date.
    * @param int $year The full year designation is required for cross-century date accuracy. If year is between 0 and 99 is used, then year is assumed to be 1900 + year.

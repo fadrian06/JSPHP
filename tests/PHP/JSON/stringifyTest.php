@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Tests\PHP\JSON;
 
-use JSBoolean;
-use JSDate;
-use JSNumber;
+use Boolean;
 use JSObject;
 use JSON;
 use JSString;
+use Number;
 use PHPUnit\Framework\TestCase;
 
 final class stringifyTest extends TestCase {
@@ -30,7 +29,7 @@ final class stringifyTest extends TestCase {
     self::assertSame('{"x":5}', JSON::stringify(['x' => 5]));
     // self::assertSame('"1906-01-02T15:04:05.000Z"', JSON::stringify(new JSDate(1906, 0, 2, 15, 4, 5)));
     self::assertSame('{"x":5,"y":6}', JSON::stringify(['x' => 5, 'y' => 6]));
-    self::assertSame('[3,"false",false]', JSON::stringify([new JSNumber(3), new JSString("false"), new JSBoolean(false)]));
+    self::assertSame('[3,"false",false]', JSON::stringify([new Number(3), new JSString("false"), new Boolean(false)]));
 
     // String-keyed array elements are not enumerable and make no sense in JSON
     $a = ['foo', 'bar'];
