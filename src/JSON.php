@@ -39,4 +39,57 @@ abstract class JSON {
 
     return $result;
   }
+
+  /**
+   * Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+   * @param mixed $value A PHP value, usually an object or array, to be converted.
+   * @param ?Closure(string $key, mixed $value, object $parsed): mixed $replacer A function that transforms the results.
+   * @param null|int<0, 10>|string $space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
+   */
+  final static function stringify($value, $replacer = null, $space = null): string {
+    if (JSArray::isArray($value)) {
+      $value = self::parseArray($value);
+    }
+
+    return json_encode($value);
+  }
+
+  /** @param mixed[] $value */
+  private static function parseArray($value): array {
+    $allKeysNumeric = null;
+
+    foreach (array_keys($value) as $key) {
+      if (is_numeric($key)) {
+        $allKeysNumeric = true;
+        continue;
+      }
+
+      if ($allKeysNumeric === true) {
+        unset($value[$key]);
+      }
+    }
+
+    foreach ($value as &$item) {
+      switch (true) {
+        case $item instanceof JSNumber:
+        case $item instanceof JSString:
+        case $item instanceof JSBoolean:
+          $item = $item->valueOf();
+          break;
+        case is_callable($item):
+          $item = null;
+          break;
+        case JSArray::isArray($item):
+          $item = self::parseArray($item);
+          break;
+        case is_nan((float) $item):
+        case $item === null:
+        case is_infinite((float) $item):
+          $item = null;
+          break;
+      }
+    }
+
+    return $value;
+  }
 }
