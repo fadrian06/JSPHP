@@ -47,14 +47,18 @@ abstract class JSON {
    * @param null|int<0, 10>|string $space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
    */
   final static function stringify($value, $replacer = null, $space = null): string {
-    if (JSArray::isArray($value)) {
+    if (is_array($value)) {
       $value = self::parseArray($value);
     }
 
-    return json_encode($value);
+    return (string) json_encode($value);
   }
 
-  /** @param mixed[] $value */
+  /**
+   * @template T
+   * @param T[] $value
+   * @return T[]
+   */
   private static function parseArray($value): array {
     $allKeysNumeric = null;
 
@@ -79,7 +83,7 @@ abstract class JSON {
         case is_callable($item):
           $item = null;
           break;
-        case JSArray::isArray($item):
+        case is_array($item):
           $item = self::parseArray($item);
           break;
         case is_nan((float) $item):

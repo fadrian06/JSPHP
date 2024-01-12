@@ -2,17 +2,34 @@
 
 declare(strict_types=1);
 
+use JSPHP\Prototypes\BooleanPrototype;
+
 final class Boolean {
   /** @var bool */
-  private $value;
+  private $value = false;
 
   /** @param mixed $value */
-  function __construct($value) {
-    $this->value = $value;
+  function __construct($value = false) {
+    switch (true) {
+      case $value instanceof BigInt:
+        $value = (bool) $value->valueOf();
+        break;
+      case is_object($value):
+        $value = true;
+        break;
+      case is_nan((float) $value):
+        $value = false;
+        break;
+      case JSArray::isArray($value):
+        $value = true;
+        break;
+    }
+
+    $this->value = (bool) $value;
   }
 
   function __toString(): string {
-    return $this->value ? 'true' : 'false';
+    return $this->toString();
   }
 
   /** Returns the primitive value of the specified object. */
@@ -22,7 +39,21 @@ final class Boolean {
 
   /** Returns a string representation of an object. */
   function toString(): string {
-    return (string) $this;
+    if (self::prototype()->toString !== null) {
+      return call_user_func(self::prototype()->toString);
+    }
+
+    return $this->value ? 'true' : 'false';
+  }
+
+  static function prototype(): BooleanPrototype {
+    static $prototype = null;
+
+    if ($prototype === null) {
+      $prototype = new BooleanPrototype;
+    }
+
+    return $prototype;
   }
 }
 

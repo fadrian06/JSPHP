@@ -68,6 +68,7 @@
       "src/Globals/JSString.php",
       "src/Globals/Number.php",
       "src/Globals/Boolean.php",
+      "src/Globals/BigInt.php",
       "src/Globals/JSON.php",
       "src/Globals/Math.php",
       "src/Globals/Date.php",

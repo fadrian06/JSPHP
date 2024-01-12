@@ -1,34 +1,9 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Property Boolean\\:\\:\\$value \\(bool\\) does not accept mixed\\.$#"
+			message: "#^Cannot cast mixed to float\\.$#"
 			count: 1
 			path: src/Globals/Boolean.php
-
-		-
-			message: "#^Cannot cast mixed to float\\.$#"
-			count: 2
-			path: src/Globals/JSON.php
-
-		-
-			message: "#^Method JSON\\:\\:parseArray\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/Globals/JSON.php
-
-		-
-			message: "#^Method JSON\\:\\:stringify\\(\\) should return string but returns string\\|false\\.$#"
-			count: 1
-			path: src/Globals/JSON.php
-
-		-
-			message: "#^Parameter \\#1 \\$value of static method JSON\\:\\:parseArray\\(\\) expects array, mixed given\\.$#"
-			count: 2
-			path: src/Globals/JSON.php
-
-		-
-			message: "#^Method Number\\:\\:__construct\\(\\) with return type void returns int but should not return anything\\.$#"
-			count: 1
-			path: src/Globals/Number.php
 
 		-
 			message: "#^Function Symbol\\(\\) has no return type specified\\.$#"

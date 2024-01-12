@@ -20,23 +20,19 @@ final class Number {
 
   /** @param mixed $value */
   function __construct($value = null) {
-    if ($value === null) {
-      $this->value = 0;
-      return;
+    switch (true) {
+      case $value === null:
+        $value = 0;
+        break;
+      case is_bool($value):
+      case is_numeric($value):
+        $value = (int) $value;
+        break;
+      default:
+        $value = NAN;
     }
 
-    if (is_bool($value)) {
-      return (int) $value;
-    }
-
-    if (is_numeric($value)) {
-      $value = (float) $value;
-      $this->value = $value;
-
-      return;
-    }
-
-    $this->value = NAN;
+    $this->value = $value;
   }
 
   function __toString(): string {
