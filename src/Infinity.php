@@ -1,0 +1,3 @@
+<?php
+
+const Infinity = INF;

@@ -68,9 +68,14 @@
       "src/JSString.php",
       "src/JSObject.php",
       "src/JSFunction.php",
+      "src/JSBoolean.php",
       "src/Math.php",
       "src/undefined.php",
-      "src/console.php"
+      "src/console.php",
+      "src/Symbol.php",
+      "src/JSDate.php",
+      "src/VarDate.php",
+      "src/Infinity.php"
     ],
     "psr-4": {
       "JSPHP\\": "src"

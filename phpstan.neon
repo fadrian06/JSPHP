@@ -10,4 +10,6 @@ parameters:
   excludePaths:
     - src/Overloads1
     - src/Overloads2
+    - src/Overloads3
+    - src/Overloads4
   treatPhpDocTypesAsCertain: false

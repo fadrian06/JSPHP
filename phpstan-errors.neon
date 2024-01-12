@@ -1,0 +1,36 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property JSBoolean\\:\\:\\$value \\(bool\\) does not accept mixed\\.$#"
+			count: 1
+			path: src/JSBoolean.php
+
+		-
+			message: "#^Method JSNumber\\:\\:__construct\\(\\) with return type void returns int but should not return anything\\.$#"
+			count: 1
+			path: src/JSNumber.php
+
+		-
+			message: "#^Cannot cast mixed to float\\.$#"
+			count: 2
+			path: src/JSON.php
+
+		-
+			message: "#^Method JSON\\:\\:parseArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/JSON.php
+
+		-
+			message: "#^Method JSON\\:\\:stringify\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: src/JSON.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of static method JSON\\:\\:parseArray\\(\\) expects array, mixed given\\.$#"
+			count: 2
+			path: src/JSON.php
+
+		-
+			message: "#^Function Symbol\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Symbol.php
