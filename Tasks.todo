@@ -23,7 +23,7 @@ JSPHP:
       ☐ String.charAt()
       ☐ String.charCodeAt()
       ☐ String.codePointAt()
-      ☐ String.concat()
+      ✔ String.concat() @done (24/01/2024 18:32:58)
       ☐ String.endsWith()
       ☐ String.includes()
       ✔ String.indexOf() @done (06/01/2024 03:00:36)
@@ -176,7 +176,7 @@ JSPHP:
   Math:
     ✔ Core behaviour @done (05/01/2024 14:41:14)
       ✔ Make class no instantiable @done (05/01/2024 14:41:09)
-    ☐ Static properties
+    ✔ Static properties @done (24/01/2024 18:05:09)
       ✔ Math.E @done (07/01/2024 11:20:16)
       ✔ Math.LN10 @done (07/01/2024 22:19:17)
       ✔ Math.LN2 @done (07/01/2024 23:30:09)

@@ -14,8 +14,21 @@ final class JSString implements Stringable {
   /** @var string */
   private $value = '';
 
-  function __construct(string $value = '') {
-    $this->value = $value;
+  /** @param mixed $value */
+  function __construct($value = '') {
+    switch (true) {
+      case is_array($value):
+        $value = JSArray(...$value);
+        break;
+      case $value === null:
+        $value = 'null';
+        break;
+      case is_bool($value):
+        $value = $value ? 'true' : 'false';
+        break;
+    }
+
+    $this->value = (string) $value;
     $this->length = mb_strlen($this->value, 'utf-8');
   }
 
@@ -146,6 +159,18 @@ final class JSString implements Stringable {
   /** Returns the primitive value of the specified object. */
   function valueOf(): string {
     return $this->value;
+  }
+
+  /**
+   * Returns a string that contains the concatenation of two or more strings.
+   * @param string|self ...$strings The strings to append to the end of the string.
+   */
+  function concat(...$strings): self {
+    $strings = array_map(function ($string): self {
+      return new self($string);
+    }, $strings);
+
+    return new static($this->value . join('', $strings));
   }
 
   // TODO: Implement JS string methods
