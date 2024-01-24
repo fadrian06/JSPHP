@@ -16,7 +16,7 @@ final class JSString implements Stringable {
 
   function __construct(string $value = '') {
     $this->value = $value;
-    $this->length = (int) mb_strlen($this->value, 'utf-8');
+    $this->length = mb_strlen($this->value, 'utf-8');
   }
 
   function __toString(): string {

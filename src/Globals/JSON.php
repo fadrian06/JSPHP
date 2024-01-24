@@ -13,13 +13,14 @@ abstract class JSON {
   /**
    * Converts a JavaScript Object Notation (JSON) string into an object.
    * @param string $text A valid JSON string.
-   * @param ?Closure(string $key, mixed $value, object $parsed): mixed $reviver
+   * @param null|(Closure(string $key, mixed $value, object $parsed): mixed) $reviver
    * A function that transforms the results. This function is called for each member
    * of the object. If a member contains nested objects, the nested objects are
    * transformed before the parent object is.
+   * @return mixed
    * @throws JsonException For invalid JSON Strings
    */
-  final static function parse(string $text, ?callable $reviver = null): mixed {
+  final static function parse(string $text, ?callable $reviver = null) {
     $result = json_decode($text);
 
     if (json_last_error() !== JSON_ERROR_NONE) {
@@ -43,7 +44,7 @@ abstract class JSON {
   /**
    * Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
    * @param mixed $value A PHP value, usually an object or array, to be converted.
-   * @param ?Closure(string $key, mixed $value, object $parsed): mixed $replacer A function that transforms the results.
+   * @param null|(Closure(string $key, mixed $value, object $parsed): mixed) $replacer A function that transforms the results.
    * @param null|int<0, 10>|string $space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
    */
   final static function stringify($value, $replacer = null, $space = null): string {

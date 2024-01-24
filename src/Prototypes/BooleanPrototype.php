@@ -7,10 +7,10 @@ namespace JSPHP\Prototypes;
 use Closure;
 
 /**
- * @property ?Closure(): string $toString Returns a string representation of an object.
+ * @property null|(Closure(): string) $toString Returns a string representation of an object.
  */
 final class BooleanPrototype {
-  /** @var ?Closure(): string */
+  /** @var null|(Closure(): string) */
   private $toString = null;
 
   function __get(string $name): ?Closure {

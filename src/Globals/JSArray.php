@@ -60,7 +60,7 @@ final class JSArray implements Stringable, ArrayAccess, Iterator {
    * @param int<0, 4294967296> $value Property value
    * @throws OutOfRangeException For invalid array length
    */
-  function __set(string $name, $value) {
+  function __set(string $name, $value): void {
     if ($name === 'length') {
       if (!is_int($value) || $value < 0 || $value >= 2 ** 32) {
         throw new OutOfRangeException('Invalid array length');
@@ -103,7 +103,7 @@ final class JSArray implements Stringable, ArrayAccess, Iterator {
    * @param Closure(?T $value, int $index, self<T> $array): void $callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
    * @param ?O $thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
    */
-  function forEach(callable $callbackfn, ?object $thisArg = null): void {
+  function forEach(callable $callbackfn, $thisArg = null): void {
     if ($thisArg !== null) {
       $callbackfn = Closure::fromCallable($callbackfn);
       $callbackfn = Closure::bind($callbackfn, $thisArg);

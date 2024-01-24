@@ -17,7 +17,7 @@ final class Boolean {
       case is_object($value):
         $value = true;
         break;
-      case is_nan((float) $value):
+      case is_float($value) && is_nan($value):
         $value = false;
         break;
       case JSArray::isArray($value):
@@ -40,7 +40,7 @@ final class Boolean {
   /** Returns a string representation of an object. */
   function toString(): string {
     if (self::prototype()->toString !== null) {
-      return call_user_func(self::prototype()->toString);
+      return (string) call_user_func(self::prototype()->toString);
     }
 
     return $this->value ? 'true' : 'false';
