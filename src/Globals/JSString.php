@@ -29,7 +29,7 @@ final class JSString implements Stringable {
     }
 
     $this->value = (string) $value;
-    $this->length = mb_strlen($this->value, 'utf-8');
+    $this->length = mb_strlen($this->value);
   }
 
   function __toString(): string {
@@ -74,7 +74,7 @@ final class JSString implements Stringable {
       $position = 0;
     }
 
-    $position = mb_strpos($this->value, $searchString, $position, 'utf-8');
+    $position = mb_strpos($this->value, $searchString, $position);
 
     return $position === false ? -1 : $position;
   }
@@ -184,6 +184,25 @@ final class JSString implements Stringable {
     }
 
     return str_ends_with($this->substring(0, $endPosition)->value, $searchString);
+  }
+
+  /**
+   * Returns true if $searchString appears as a substring of the result of converting this
+   * object to a String, at one or more positions that are
+   * greater than or equal to $position; otherwise, returns false.
+   * @param ?int $position If position is undefined, 0 is assumed, so as to search all of the String.
+   * @throws TypeError Thrown if $searchString is a regex.
+   */
+  function includes(string $searchString, ?int $position = 0): bool {
+    if ($searchString === '') {
+      return true;
+    }
+
+    if ($position === null) {
+      $position = 0;
+    }
+
+    return mb_strpos($this->value, $searchString, $position) !== false;
   }
 
   // TODO: Implement JS string methods
