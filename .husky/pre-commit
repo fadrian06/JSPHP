@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-composer validate & composer test & composer lint
+php composer.phar validate -- --no-ansi & php composer.phar test & php composer.phar lint -- --no-ansi

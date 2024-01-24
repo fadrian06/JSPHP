@@ -36,24 +36,38 @@
   },
   "build_systems": [
     {
-      "name": "Lint",
-      "shell_cmd": "composer lint -- --no-ansi",
+      "name": "Lint - Default",
+      "shell_cmd": "php composer.phar lint -- --no-ansi",
       "quiet": true,
     },
     {
+      "name": "Lint - HARD",
+      "shell_cmd": "php composer.phar lint -- --no-ansi -lmax",
+      "quiet": true
+    },
+    {
       "name": "Lint - Save errors",
-      "shell_cmd": "composer lint:save -- --no-ansi",
+      "shell_cmd": "php composer.phar lint:save -- --no-ansi",
       "quiet": true,
     },
     {
       "name": "Test",
-      "shell_cmd": "composer test -- --colors=never",
+      "shell_cmd": "php composer.phar test -- --colors=never",
       "quiet": true,
     },
     {
       "name": "Coverage",
-      "shell_cmd": "composer coverage -- --colors=never",
+      "shell_cmd": "php composer.phar coverage -- --colors=never",
       "quiet": true,
+    },
+    {
+      "name": "Download composer",
+      "shell_cmd": "php -r \"if (!file_exists('composer.phar')) { echo '⌛ Downloading composer.phar...', PHP_EOL; `curl -s -O https://getcomposer.org/download/2.2.22/composer.phar`; echo '✓ Download completed', PHP_EOL; }\"",
+        "quiet": true
+    },
+    {
+      "name": "Install dependencies",
+      "shell_cmd": "npm i & php -r \"if (file_exists('composer.lock')) unlink('composer.lock');\" & php composer.phar install --no-progress --no-ansi"
     }
   ],
   "debugger_configurations":
