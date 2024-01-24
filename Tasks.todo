@@ -24,7 +24,7 @@ JSPHP:
       ☐ String.charCodeAt()
       ☐ String.codePointAt()
       ✔ String.concat() @done (24/01/2024 18:32:58)
-      ☐ String.endsWith()
+      ✔ String.endsWith() @done (24/01/2024 19:37:04)
       ☐ String.includes()
       ✔ String.indexOf() @done (06/01/2024 03:00:36)
         ✔ When $searchString param be null or undefined, use 'undefined' @done (06/01/2024 02:03:07)

@@ -173,6 +173,19 @@ final class JSString implements Stringable {
     return new static($this->value . join('', $strings));
   }
 
+  /**
+   * Returns true if the sequence of elements of $searchString converted to a String is the
+   * same as the corresponding elements of this object (converted to a String) starting at
+   * $endPosition – length($this). Otherwise returns false.
+   */
+  function endsWith(string $searchString, ?int $endPosition = null): bool {
+    if ($endPosition === null) {
+      $endPosition = $this->length;
+    }
+
+    return str_ends_with($this->substring(0, $endPosition)->value, $searchString);
+  }
+
   // TODO: Implement JS string methods
 }
 
