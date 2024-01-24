@@ -1,11 +1,22 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Cannot cast mixed to float\\.$#"
+			message: "#^Cannot cast mixed to string\\.$#"
 			count: 1
 			path: src/Globals/Boolean.php
+
+		-
+			message: "#^Comparison operation \"\\<\" between int\\<0, 4294967296\\> and 0 is always false\\.$#"
+			count: 1
+			path: src/Globals/JSArray.php
+
+		-
+			message: "#^Comparison operation \"\\<\" between int\\<0, max\\> and 0 is always false\\.$#"
+			count: 1
+			path: src/Globals/JSString.php
 
 		-
 			message: "#^Function Symbol\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: src/Globals/Symbol.php
+
