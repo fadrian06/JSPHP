@@ -34,7 +34,7 @@ JSPHP:
       ☐ String.match()
       ☐ String.matchAll()
       ☐ String.normalize()
-      ☐ String.padEnd()
+      ✔ String.padEnd() @done (24/01/2024 23:30:43)
       ☐ String.padStart()
       ☐ String.repeat()
       ☐ String.replace()

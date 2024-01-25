@@ -249,6 +249,21 @@ final class JSString implements Stringable {
     return $lastIndex;
   }
 
+  /**
+   * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.
+   * The padding is applied from the end (right) of the current string.
+   *
+   * @param int $maxLength The length of the resulting string once the current string has been padded.
+   *        If this parameter is smaller than the current string's length, the current string will be returned as it is.
+   *
+   * @param string $fillString The string to pad the current string with.
+   *        If this string is too long, it will be truncated and the left-most part will be applied.
+   *        The default value for this parameter is " " (U+0020).
+   */
+  function padEnd(int $maxLength, string $fillString = ' '): self {
+    return new self(str_pad($this->value, $maxLength, $fillString));
+  }
+
   // TODO: Implement JS string methods
 }
 
