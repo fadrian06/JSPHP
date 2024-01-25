@@ -29,7 +29,7 @@ JSPHP:
       ✔ String.indexOf() @done (06/01/2024 03:00:36)
         ✔ When $searchString param be null or undefined, use 'undefined' @done (06/01/2024 02:03:07)
       ☐ String.isWellFormed()
-      ☐ String.lastIndexOf()
+      ✔ String.lastIndexOf() @done (24/01/2024 22:44:26)
       ☐ String.localeCompare()
       ☐ String.match()
       ☐ String.matchAll()
@@ -82,7 +82,8 @@ JSPHP:
   --- ✄ -----------------------
   JSNumber:
     ☐ Static properties
-      ☐ Number.EPSILON
+      ✔ Number.EPSILON @done (24/01/2024 20:43:48)
+      ✔ Number.MIN_VALUE @done (24/01/2024 20:44:44)
       ☐ Number.MAX_SAFE_INTEGER
       ☐ Number.MAX_VALUE
       ☐ Number.MIN_SAFE_INTEGER

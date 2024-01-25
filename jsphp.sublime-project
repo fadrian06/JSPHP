@@ -63,14 +63,12 @@
     {
       "name": "Download composer",
       "shell_cmd": "php -r \"if (!file_exists('composer.phar')) { echo '⌛ Downloading composer.phar...', PHP_EOL; `curl -s -O https://getcomposer.org/download/2.2.22/composer.phar`; echo '✓ Download completed', PHP_EOL; }\"",
-        "quiet": true
+      "quiet": true
     },
     {
       "name": "Install dependencies",
       "shell_cmd": "npm i & php -r \"if (file_exists('composer.lock')) unlink('composer.lock');\" & php composer.phar install --no-progress --no-ansi"
     }
   ],
-  "debugger_configurations":
-  [
-	],
+  "debugger_configurations": []
 }

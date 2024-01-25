@@ -5,10 +5,10 @@ declare(strict_types=1);
 /**
  * Allows manipulation and formatting of text strings and determination and
  * location of substrings within strings.
- * @property-read int $length Returns the length of a String object.
+ * @property-read int<0, max> $length Returns the length of a String object.
  */
 final class JSString implements Stringable {
-  /** @var int */
+  /** @var int<0, max> */
   private $length = 0;
 
   /** @var string */
@@ -53,12 +53,14 @@ final class JSString implements Stringable {
    * Returns the position of the first occurrence of a substring.
    * @param ?string $searchString The substring to search for in the string
    * @param int<0, max> $position The index at which to begin searching the String object. If omitted, search starts at the beginning of the string.
-   * @return int The index of the first occurrence of searchString found, or -1 if not found.
+   * @return int<-1, max> The index of the first occurrence of $searchString found, or -1 if not found.
    */
   function indexOf(?string $searchString = null, int $position = 0): int {
     if ($searchString === '' && $position >= $this->length) {
       return $this->length;
-    } elseif ($searchString === '') {
+    }
+
+    if ($searchString === '') {
       return $position;
     }
 
@@ -203,6 +205,48 @@ final class JSString implements Stringable {
     }
 
     return mb_strpos($this->value, $searchString, $position) !== false;
+  }
+
+  /**
+   * Returns the last occurrence of a substring in the string.
+   * @param string $searchString The substring to search for.
+   * @param ?int $position The index at which to begin searching. If omitted, the search begins at the end of the string.
+   */
+  function lastIndexOf(string $searchString, ?int $position = null): int {
+    $haystack = $this;
+
+    if ($searchString === '') {
+      if ($position === null) {
+        $position = $this->length;
+      }
+
+      return $position;
+    }
+
+    if ($position < 0) {
+      return $this->indexOf($searchString);
+    }
+
+    if ($position === 0) {
+      return $this->indexOf($searchString) === $position ? $position : -1;
+    }
+
+    if ($position > $this->length) {
+      $position = null;
+    }
+
+    if ($position < $this->length) {
+      $haystack = $this->substring(0, $position);
+      $position = null;
+    }
+
+    $lastIndex = mb_strrpos($haystack->value, $searchString, $position ?? 0);
+
+    if ($lastIndex === false || ($position !== null && $lastIndex > $position)) {
+      return -1;
+    }
+
+    return $lastIndex;
   }
 
   // TODO: Implement JS string methods
