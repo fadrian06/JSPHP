@@ -192,6 +192,15 @@ final class JSArray implements Stringable, ArrayAccess, Iterator {
   function rewind(): void {
     $this->position = 0;
   }
+
+  /**
+   * Determines whether an array includes a certain element, returning true or false as appropriate.
+   * @param T $searchElement The element to search for.
+   * @param ?int $fromIndex The position in this array at which to begin searching for searchElement.
+   */
+  function includes($searchElement, ?int $fromIndex = null): bool {
+    return in_array($searchElement, $this->items, true);
+  }
 }
 
 /**

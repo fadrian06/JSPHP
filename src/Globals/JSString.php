@@ -264,7 +264,15 @@ final class JSString implements Stringable {
     return new self(str_pad($this->value, $maxLength, $fillString));
   }
 
-  // TODO: Implement JS string methods
+  /**
+   * Split a string into substrings using the specified separator and return them as an array.
+   * @param string $separator A string that identifies character or characters to use in separating the string. If omitted, a single-element array containing the entire string is returned.
+   * @param ?int $limit A value used to limit the number of elements returned in the array.
+   * @return JSArray<string>
+   */
+  function split($separator, ?int $limit = null): JSArray {
+    return JSArray(...explode($separator, $this->value));
+  }
 }
 
 /**

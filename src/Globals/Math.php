@@ -31,8 +31,10 @@ final class Math {
    * @param int|float $number A numeric expression for which the absolute value is needed.
    * @return int|float
    */
-  static function abs($number) {
-    assert(is_numeric($number));
+  static function abs($number = 'undefined') {
+    if (is_array($number) || is_string($number)) {
+      $number = Number($number)->valueOf();
+    }
 
     return abs($number);
   }
@@ -47,5 +49,46 @@ final class Math {
     return acos($number);
   }
 
-  // TODO: Implement Math JavaScript class
+  /**
+   * Returns an implementation-dependent approximation to the cube root of number.
+   * @param int|float $x A numeric expression.
+   * @return int|float
+   */
+  static function cbrt($x) {
+    return $x ** (1 / 3);
+  }
+
+  /**
+   * Returns the smallest integer greater than or equal to its numeric argument.
+   * @param int|float $x A numeric expression.
+   * @return int|float
+   */
+  static function ceil($x) {
+    if ($x === Infinity || $x === -Infinity) {
+      return $x;
+    }
+
+    return (int) ceil($x);
+  }
+
+  /**
+   * Returns the greatest integer less than or equal to its numeric argument.
+   * @param int|float $x A numeric expression.
+   * @return int|float
+   */
+  static function floor($x) {
+    if ($x === Infinity || $x === -Infinity) {
+      return $x;
+    }
+
+    return (int) floor($x);
+  }
+
+  /**
+   * Returns a supplied numeric expression rounded to the nearest integer.
+   * @param int|float $x The value to be rounded to the nearest integer.
+   */
+  static function round($x): float {
+    return round($x);
+  }
 }

@@ -70,5 +70,6 @@
       "shell_cmd": "npm i & php -r \"if (file_exists('composer.lock')) unlink('composer.lock');\" & php composer.phar install --no-progress --no-ansi"
     }
   ],
-  "debugger_configurations": []
+  "debugger_configurations": [],
+  "SublimeLinter.linters.phpstan.disable": false
 }

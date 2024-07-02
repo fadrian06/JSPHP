@@ -21,6 +21,21 @@ parameters:
 			path: src/Globals/JSString.php
 
 		-
+			message: "#^Method JSString\\:\\:split\\(\\) should return JSArray\\<string\\> but returns JSArray\\<null\\>\\.$#"
+			count: 1
+			path: src/Globals/JSString.php
+
+		-
+			message: "#^Only iterables can be unpacked, array\\<int, string\\>\\|false given in argument \\#1\\.$#"
+			count: 1
+			path: src/Globals/JSString.php
+
+		-
+			message: "#^Default value of the parameter \\#1 \\$number \\(string\\) of method Math\\:\\:abs\\(\\) is incompatible with type float\\|int\\.$#"
+			count: 1
+			path: src/Globals/Math.php
+
+		-
 			message: "#^Function Symbol\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: src/Globals/Symbol.php

@@ -187,7 +187,7 @@ JSPHP:
       ✔ Math.SQRT1_2 @done (07/01/2024 23:30:12)
       ✔ Math.SQRT2 @done (07/01/2024 23:30:13)
     ☐ Static methods
-      ☐ Math.abs()
+      ✔ Math.abs() @done (01/07/2024 19:04:24)
       ☐ Math.acos()
       ☐ Math.acosh()
       ☐ Math.asin()
@@ -195,7 +195,7 @@ JSPHP:
       ☐ Math.atan()
       ☐ Math.atan2()
       ☐ Math.cbrt()
-      ☐ Math.ceil()
+      ✔ Math.ceil() @done (01/07/2024 19:13:13)
       ☐ Math.clz32()
       ☐ Math.cos()
       ☐ Math.cosh()
