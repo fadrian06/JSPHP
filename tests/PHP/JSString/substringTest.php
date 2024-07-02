@@ -39,7 +39,7 @@ final class substringTest extends TestCase {
     $text = String('Mozilla');
 
     self::assertEquals('zil', $text->substring(2, 5));
-    // self::assertEquals('zil', $text->substr(2, 3)); // TODO
+    self::assertEquals('zil', $text->substr(2, 3));
   }
 
   function test_Differences_between_substring_and_slice(): void {

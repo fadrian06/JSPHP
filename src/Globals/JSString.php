@@ -273,6 +273,31 @@ final class JSString implements Stringable {
   function split($separator, ?int $limit = null): JSArray {
     return JSArray(...explode($separator, $this->value));
   }
+
+  /**
+   * Gets a substring beginning at the specified location and having the specified length.
+   * @deprecated A legacy feature for browser compatibility
+   * @param int $from The starting position of the desired substring. The index of the first character in the string is zero.
+   * @param ?int $length The number of characters to include in the returned substring.
+   */
+  function substr($from = 0, $length = null): self {
+    $params = [$this->value, $from];
+
+    if ($length !== null) {
+      $params[] = $length;
+    }
+
+    if (
+      $length < 0
+      || Number::isNaN($from)
+      || Number::isNaN($length)
+      || $from + ($length ?? 0) >= $this->length
+    ) {
+      return new self;
+    }
+
+    return new self(substr(...$params));
+  }
 }
 
 /**
