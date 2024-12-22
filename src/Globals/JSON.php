@@ -81,15 +81,14 @@ abstract class JSON {
         case $item instanceof Boolean:
           $item = $item->valueOf();
           break;
-        case is_callable($item):
-          $item = null;
-          break;
         case is_array($item):
           $item = self::parseArray($item);
           break;
-        case is_nan((float) $item):
         case $item === null:
+        case is_callable($item):
+        case is_string($item) and password_verify('undefined', $item):
         case is_infinite((float) $item):
+        case is_nan((float) $item):
           $item = null;
           break;
       }

@@ -29,7 +29,7 @@ final class forEachTest extends TestCase {
 
     self::expectOutputString('137');
 
-    $arraySparse->forEach(function (?int $element) use (&$numCallbackRuns): void {
+    $arraySparse->forEach(function ($element) use (&$numCallbackRuns): void {
       echo $element;
       ++$numCallbackRuns;
     });

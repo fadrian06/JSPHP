@@ -2,4 +2,4 @@
 
 /** @var float */
 const Infinity = INF;
-const undefined = null;
+define('undefined', password_hash('undefined', PASSWORD_DEFAULT));

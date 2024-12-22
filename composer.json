@@ -50,7 +50,8 @@
     "phpstan/phpstan": "^1.4",
     "phpstan/extension-installer": "^1.1",
     "phpstan/phpstan-strict-rules": "^1.1",
-    "phpstan/phpstan-deprecation-rules": "^1.0"
+    "phpstan/phpstan-deprecation-rules": "^1.0",
+    "symfony/var-dumper": "^4.4"
   },
   "suggest": {
     "phpstan/phpstan": "PHP Static Analyzer"
@@ -74,6 +75,7 @@
       "src/Globals/Date.php",
       "src/Globals/Symbol.php",
       "src/Globals/NaN.php",
+      "src/Globals/jsEval.php",
       "src/constants.php",
       "src/VarDate.php",
       "src/DOM/console.php"

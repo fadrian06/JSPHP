@@ -23,6 +23,9 @@ final class Boolean {
       case JSArray::isArray($value):
         $value = true;
         break;
+      case is_string($value) && password_verify('undefined', $value):
+        $value = false;
+        break;
     }
 
     $this->value = (bool) $value;

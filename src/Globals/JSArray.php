@@ -110,7 +110,10 @@ final class JSArray implements Stringable, ArrayAccess, Iterator {
     }
 
     foreach ($this->items as $index => $value) {
-      if ($value === null) {
+      if (
+        $value === null ||
+        (is_string($value) && password_verify('undefined', $value))
+      ) {
         continue;
       }
 

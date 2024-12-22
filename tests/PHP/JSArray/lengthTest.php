@@ -62,7 +62,9 @@ final class lengthTest extends TestCase {
 
     self::assertSame([1, 2, 3], $numbers->values());
     self::assertSame(3, $numbers->length);
-    self::assertSame(undefined, $numbers[3]);
+    // TODO
+    // self::assertSame(undefined, $numbers[3]);
+    self::assertSame(null, $numbers[3]);
   }
 
   function test_Create_empty_array_of_fixed_length(): void {

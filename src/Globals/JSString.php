@@ -6,13 +6,17 @@ declare(strict_types=1);
  * Allows manipulation and formatting of text strings and determination and
  * location of substrings within strings.
  * @property-read int<0, max> $length Returns the length of a String object.
+ * @implements ArrayAccess<int, string>
  */
-final class JSString implements Stringable {
+final class JSString implements Stringable, ArrayAccess {
   /** @var int<0, max> */
   private $length = 0;
 
   /** @var string */
   private $value = '';
+
+  /** @var bool */
+  protected $isPrimitive = false;
 
   /** @param mixed $value */
   function __construct($value = '') {
@@ -25,6 +29,9 @@ final class JSString implements Stringable {
         break;
       case is_bool($value):
         $value = $value ? 'true' : 'false';
+        break;
+      case is_string($value) and password_verify('undefined', $value):
+        $value = 'undefined';
         break;
     }
 
@@ -47,6 +54,21 @@ final class JSString implements Stringable {
 
   /** @param mixed $value */
   function __set(string $name, $value): void {
+  }
+
+  function offsetExists($offset): bool {
+    return false;
+  }
+
+  #[ReturnTypeWillChange]
+  function offsetGet($offset) {
+    return $this->value[$offset];
+  }
+
+  function offsetSet($offset, $value): void {
+  }
+
+  function offsetUnset($offset): void {
   }
 
   /**
@@ -114,7 +136,7 @@ final class JSString implements Stringable {
       $result .= $this->value[$i];
     }
 
-    return new self($result);
+    return String($result);
   }
 
   /**
@@ -296,22 +318,52 @@ final class JSString implements Stringable {
       return new self;
     }
 
-    return new self(substr(...$params));
+    return String(substr(...$params));
+  }
+
+  /**
+   * @param array<string, string> $options
+   */
+  function localeCompare(string $compareString, string $locales = 'en-US', array $options = []): int {
+    return (int) collator_compare(
+      collator_create($locales),
+      $this->value,
+      $compareString
+    );
+  }
+
+  /**
+   * Returns a `<b>` HTML element
+   * @deprecated A legacy feature for browser compatibility
+   */
+  function bold(): self {
+    return new self("<b>$this->value</b>");
+  }
+
+  /**
+   * Returns an `<a>` HTML anchor element and sets the name attribute to the
+   * text value
+   * @deprecated A legacy feature for browser compatibility
+   * @param string $name
+   */
+  function anchor(string $name): self {
+    $name = htmlentities($name);
+
+    return new self("<a name=\"$name\">$this->value</a>");
   }
 }
 
 /**
  * Allows manipulation and formatting of text strings and determination and
  * location of substrings within strings.
+ * @param mixed $value
  */
-function String(string $value = ''): JSString {
-  return new JSString($value);
-}
+function String($value = ''): JSString {
+  $jsString = new JSString($value);
+  $reflection = new ReflectionClass($jsString);
+  $property = $reflection->getProperty('isPrimitive');
+  $property->setAccessible(true);
+  $property->setValue($jsString, true);
 
-/**
- * Allows manipulation and formatting of text strings and determination and
- * location of substrings within strings.
- */
-function JSString(string $value = ''): JSString {
-  return new JSString($value);
+  return $jsString;
 }
