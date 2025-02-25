@@ -24,7 +24,7 @@
       },
       "LSP-intelephense": {
         "settings": {
-          "intelephense.environment.phpVersion": "7.1.0",
+          "intelephense.environment.phpVersion": "7.1",
           "intelephense.format.braces": "k&r",
         },
       },
@@ -33,6 +33,11 @@
         "source.json.composer": "LSP-json",
       },
     },
+    "SublimeLinter.linters.phpstan.disable": true,
+    "SublimeLinter.linters.phpmd.disable": true,
+    "SublimeLinter.linters.php.disable": true,
+    "SublimeLinter.linters.phpcs.disable": true,
+    "SublimeLinter.linters.rector.disable": true,
   },
   "build_systems": [
     {
@@ -71,5 +76,4 @@
     }
   ],
   "debugger_configurations": [],
-  "SublimeLinter.linters.phpstan.disable": false
 }
