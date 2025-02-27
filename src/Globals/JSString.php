@@ -351,6 +351,25 @@ final class JSString implements Stringable, ArrayAccess {
 
     return new self("<a name=\"$name\">$this->value</a>");
   }
+
+  static function fromCharCode(int ...$codes): self {
+    return new self(join('', array_map('mb_chr', $codes)));
+  }
+
+  /**
+   * Return the String value whose elements are, in order, the elements in the List elements.
+   * If length is 0, the empty string is returned.
+   * @param int|float ...$codePoints
+   */
+  static function fromCodePoint(...$codePoints): self {
+    return new self(join('', array_map(static function ($codePoint): string {
+      if (!is_int($codePoint)) {
+        throw new RangeError;
+      }
+
+      return mb_chr($codePoint);
+    }, $codePoints)));
+  }
 }
 
 /**

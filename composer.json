@@ -78,6 +78,7 @@
       "src/Globals/Symbol.php",
       "src/Globals/NaN.php",
       "src/Globals/jsEval.php",
+      "src/Globals/RangeError.php",
       "src/constants.php",
       "src/VarDate.php",
       "src/DOM/console.php"

@@ -31,6 +31,7 @@
       "formatters": {
         "source.json.sublime": "LSP-json",
         "source.json.composer": "LSP-json",
+        "source.js": "LSP-biome",
       },
     },
     "SublimeLinter.linters.phpstan.disable": true,
@@ -48,7 +49,7 @@
     {
       "name": "Lint - HARD",
       "shell_cmd": "php composer.phar lint -- --no-ansi -lmax",
-      "quiet": true
+      "quiet": true,
     },
     {
       "name": "Lint - Save errors",
@@ -68,11 +69,11 @@
     {
       "name": "Download composer",
       "shell_cmd": "php -r \"if (!file_exists('composer.phar')) { echo '⌛ Downloading composer.phar...', PHP_EOL; `curl -s -O https://getcomposer.org/download/2.2.22/composer.phar`; echo '✓ Download completed', PHP_EOL; }\"",
-      "quiet": true
+      "quiet": true,
     },
     {
       "name": "Install dependencies",
-      "shell_cmd": "npm i & php -r \"if (file_exists('composer.lock')) unlink('composer.lock');\" & php composer.phar install --no-progress --no-ansi"
+      "shell_cmd": "npm i & php -r \"if (file_exists('composer.lock')) unlink('composer.lock');\" & php composer.phar install --no-progress --no-ansi",
     }
   ],
   "debugger_configurations": [],
