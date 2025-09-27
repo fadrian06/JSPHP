@@ -36,6 +36,7 @@
   },
   "require": {
     "php": "^7.1 || ^8",
+    "ext-intl": "*",
     "symfony/polyfill-php73": "^1.30",
     "symfony/polyfill-php80": "^1.30",
     "symfony/polyfill-php81": "^1.30",
@@ -61,27 +62,25 @@
   },
   "autoload": {
     "files": [
+      "src/constants.php",
+      "src/DOM/console.php",
+      "src/Globals/BigInt.php",
+      "src/Globals/Boolean.php",
+      "src/Globals/Date.php",
       "src/Globals/JSArray.php",
+      "src/Globals/jsEval.php",
       "src/Globals/JSFunction.php",
       "src/Globals/JSObject.php",
-      "src/Globals/JSString.php",
-      "src/Globals/Number.php",
-      "src/Globals/Boolean.php",
-      "src/Globals/BigInt.php",
       "src/Globals/JSON.php",
+      "src/Globals/JSString.php",
       "src/Globals/Math.php",
-      "src/Globals/Date.php",
-      "src/Globals/Symbol.php",
       "src/Globals/NaN.php",
-      "src/Globals/jsEval.php",
+      "src/Globals/Number.php",
       "src/Globals/RangeError.php",
-      "src/constants.php",
-      "src/VarDate.php",
-      "src/DOM/console.php"
-    ],
-    "psr-4": {
-      "JSPHP\\": "src"
-    }
+      "src/Globals/Symbol.php",
+      "src/Operators/typeof.php",
+      "src/VarDate.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
