@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use JSPHP\Prototypes\BooleanPrototype;
-
 final class Boolean {
   /** @var bool */
   private $value = false;
@@ -42,21 +40,7 @@ final class Boolean {
 
   /** Returns a string representation of an object. */
   function toString(): string {
-    if (self::prototype()->toString !== null) {
-      return (string) call_user_func(self::prototype()->toString);
-    }
-
     return $this->value ? 'true' : 'false';
-  }
-
-  static function prototype(): BooleanPrototype {
-    static $prototype = null;
-
-    if ($prototype === null) {
-      $prototype = new BooleanPrototype;
-    }
-
-    return $prototype;
   }
 }
 
