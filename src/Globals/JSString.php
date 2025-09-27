@@ -404,15 +404,15 @@ final class JSString implements Stringable, ArrayAccess {
 }
 
 /**
- * @param mixed $value
  * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
+ * @param mixed $value
  */
 function String($value = ''): JSString {
   $jsString = new JSString($value);
-  $reflection = new ReflectionClass($jsString);
-  $property = $reflection->getProperty('isPrimitive');
-  $property->setAccessible(true);
-  $property->setValue($jsString, true);
+  $reflectionClass = new ReflectionClass($jsString);
+  $isPrimitiveProperty = $reflectionClass->getProperty('isPrimitive');
+  $isPrimitiveProperty->setAccessible(true);
+  $isPrimitiveProperty->setValue($jsString, true);
 
   return $jsString;
 }
