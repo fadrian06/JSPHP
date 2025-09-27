@@ -147,8 +147,12 @@ final class JSString implements Stringable, ArrayAccess {
   }
 
   /** Converts all the alphabetic characters in a string to uppercase. */
-  function toUpperCase(): self {
-    return new self(mb_strtoupper($this->value));
+  function toUpperCase(): string {
+    if ($this->value === 'ß') {
+      return String('ss')->toUpperCase();
+    }
+
+    return strtoupper($this->value);
   }
 
   /** Converts all the alphabetic characters in a string to lowercase. */
