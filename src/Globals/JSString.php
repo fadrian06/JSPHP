@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Allows manipulation and formatting of text strings and determination and
- * location of substrings within strings.
+ * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
  * @property-read int<0, max> $length Returns the length of a String object.
  * @implements ArrayAccess<int, string>
  */
@@ -373,9 +372,8 @@ final class JSString implements Stringable, ArrayAccess {
 }
 
 /**
- * Allows manipulation and formatting of text strings and determination and
- * location of substrings within strings.
  * @param mixed $value
+ * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
  */
 function String($value = ''): JSString {
   $jsString = new JSString($value);
