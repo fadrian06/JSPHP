@@ -28,7 +28,7 @@ final class Math {
    * Returns the absolute value of a number (the value without regard to whether
    * it is positive or negative). For example, the absolute value of -5 is the same
    * as the absolute value of 5.
-   * @param int|float $number A numeric expression for which the absolute value is needed.
+   * @param string|int|float $number A numeric expression for which the absolute value is needed.
    * @return int|float
    */
   static function abs($number = 'undefined') {
