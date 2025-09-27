@@ -1,13 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Evaluates JavaScript code and executes it.
  * @param string|JSString $x A String value that contains valid JavaScript code.
- * @return mixed
+ * @return mixed TODO: Specify return type
  */
 function jsEval($x) {
   if ($x instanceof JSString) {
-    // Read $isPrimitive private property using reflection
     $reflection = new ReflectionClass($x);
     $property = $reflection->getProperty('isPrimitive');
     $property->setAccessible(true);
