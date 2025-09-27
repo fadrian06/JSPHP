@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 php composer.phar validate --no-ansi
-php composer.phar test -- --colors=never
-php composer.phar lint -- --no-ansi
+php composer.phar --no-ansi test -- --colors=never
+php composer.phar --no-ansi lint -- --no-ansi
