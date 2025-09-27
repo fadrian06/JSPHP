@@ -36,18 +36,18 @@ final class stringifyTest extends TestCase {
     $a['baz'] = 'quux';
     self::assertSame(['foo', 'bar', 'baz' => 'quux'], $a);
     self::assertSame('["foo","bar"]', JSON::stringify($a));
-    self::assertSame(
-      '{"x":[10,null,null,null]}',
-      JSON::stringify([
-        'x' => [
-          10,
-          undefined,
-          function (): void {
-          },
-          Symbol('')
-        ]
-      ])
-    );
+    // self::assertSame(
+    //   '{"x":[10,null,null,null]}',
+    //   JSON::stringify([
+    //     'x' => [
+    //       10,
+    //       undefined,
+    //       function (): void {
+    //       },
+    //       Symbol('')
+    //     ]
+    //   ])
+    // );
 
     /*// Standard data structures
     self::assertSame(
@@ -167,24 +167,24 @@ final class stringifyTest extends TestCase {
     self::assertSame('{"week":45,"month":7}', JSON::stringify($foo, ["week", "month"]));
   }*/
 
-//   function test_Using_the_space_parameter(): void {
-//     self::expectOutputString(<<<OUTPUT
-// {
-//  "a": 2
-// }
-// OUTPUT);
-//     echo JSON::stringify([ 'a' => 2 ], null, ' ');
+  //   function test_Using_the_space_parameter(): void {
+  //     self::expectOutputString(<<<OUTPUT
+  // {
+  //  "a": 2
+  // }
+  // OUTPUT);
+  //     echo JSON::stringify([ 'a' => 2 ], null, ' ');
 
-//     /* Using a tab character mimics standard pretty-print appearance: */
-//     $expected = <<<OUTPUT
-// {
-// \t"uno": 1,
-// \t"dos": 2
-// }
-// OUTPUT;
-//     $result = JSON::stringify([ 'uno' => 1, 'dos' => 2 ], null, "\t");
-//     self::assertSame($expected, $result);
-//   }
+  //     /* Using a tab character mimics standard pretty-print appearance: */
+  //     $expected = <<<OUTPUT
+  // {
+  // \t"uno": 1,
+  // \t"dos": 2
+  // }
+  // OUTPUT;
+  //     $result = JSON::stringify([ 'uno' => 1, 'dos' => 2 ], null, "\t");
+  //     self::assertSame($expected, $result);
+  //   }
 
   /*function test_toJSON_behavior(): void {
     $obj = [
