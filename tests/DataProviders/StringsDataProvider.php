@@ -13,10 +13,10 @@ final class StringsDataProvider {
         "",
         <<<HEREDOC
 
-        HEREDOC,
+HEREDOC,
         <<<'NOWDOC'
 
-        NOWDOC
+NOWDOC
       ],
       'anscii characters' => [
         'Hello World',
