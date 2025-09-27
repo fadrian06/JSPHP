@@ -327,14 +327,40 @@ final class JSString implements Stringable, ArrayAccess {
   }
 
   /**
-   * @param array<string, string> $options
+   * Determines whether two strings are equivalent in the current locale.
+   * @param string $that String to compare to target string
+   * @todo Add localeCompare overloads
    */
-  function localeCompare(string $compareString, string $locales = 'en-US', array $options = []): int {
-    return (int) collator_compare(
-      collator_create($locales),
-      $this->value,
-      $compareString
-    );
+  function localeCompare(string $that): int {
+    if (func_num_args() === 3) {
+      $locale = strval(func_get_arg(1));
+
+      /** @var array<string, mixed> */
+      $options = func_get_arg(2);
+
+      $sensitivity = $options['sensitivity'];
+
+      $collator = new Collator($locale);
+
+      // Sensitivity mapping (approximation)
+      switch ($sensitivity) {
+        case 'base':
+          $collator->setStrength(Collator::PRIMARY); // base letters only
+          break;
+        case 'accent':
+          $collator->setStrength(Collator::SECONDARY); // base + accents
+          break;
+        case 'case':
+          $collator->setStrength(Collator::TERTIARY); // base + accents + case
+          break;
+        default:
+          $collator->setStrength(Collator::IDENTICAL); // full comparison
+      }
+
+      return $collator->compare($this->value, $that) ?: 0;
+    }
+
+    return strcmp($this->value, $that);
   }
 
   /**
