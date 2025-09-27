@@ -296,7 +296,9 @@ final class JSString implements Stringable, ArrayAccess {
    * @return JSArray<string>
    */
   function split($separator, ?int $limit = null): JSArray {
-    return JSArray(...explode($separator, $this->value));
+    $explodedValue = explode($separator, $this->value) ?: [];
+
+    return JSArray(...$explodedValue);
   }
 
   /**
