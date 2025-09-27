@@ -1,9 +1,9 @@
 {
-	"recommendations": [
-		"editorconfig.editorconfig",
-		"bmewburn.vscode-intelephense-client",
-		"swordev.phpstan",
-		"wayou.vscode-todo-highlight",
-		"sandy081.todotasks"
-	]
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "bmewburn.vscode-intelephense-client",
+    "swordev.phpstan",
+    "wayou.vscode-todo-highlight",
+    "sandy081.todotasks"
+  ]
 }

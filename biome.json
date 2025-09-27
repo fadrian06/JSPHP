@@ -2,5 +2,13 @@
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "formatter": {
     "indentStyle": "space"
+  },
+  "files": {
+    "ignore": ["*.sublime-project", "vendor"]
+  },
+  "json": {
+    "parser": {
+      "allowComments": true
+    }
   }
 }

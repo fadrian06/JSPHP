@@ -18,10 +18,7 @@
   "Separator": {
     "scope": "text.todo",
     "prefix": "--",
-    "body": [
-      "--- ✄ -----------------------",
-      "$1"
-    ],
+    "body": ["--- ✄ -----------------------", "$1"],
     "description": "Tasks section separator"
   }
 }

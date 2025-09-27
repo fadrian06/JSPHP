@@ -21,12 +21,7 @@
       "role": "FullStack Developer"
     }
   ],
-  "keywords": [
-    "javascript",
-    "open-source",
-    "php",
-    "library"
-  ],
+  "keywords": ["javascript", "open-source", "php", "library"],
   "scripts": {
     "test": "phpunit --colors=auto",
     "lint": "phpstan -cphpstan.neon --no-progress",

@@ -1,16 +1,12 @@
 {
   "PHP tag": {
     "prefix": "php",
-    "body": [
-      "<?php $1 ?>"
-    ],
+    "body": ["<?php $1 ?>"],
     "description": "PHP standard opening and closing tag"
   },
   "PHP short echo tag": {
     "prefix": "phpe",
-    "body": [
-      "<?= ${1:expression} ?>"
-    ],
+    "body": ["<?= ${1:expression} ?>"],
     "description": "PHP standard short echo tag"
   }
 }
