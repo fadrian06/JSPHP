@@ -140,10 +140,10 @@ final class JSString implements Stringable, ArrayAccess {
 
   /**
    * Returns the character at the specified index.
-   * @param int|float $pos The zero-based index of the desired character.
+   * @param int $pos The zero-based index of the desired character.
    */
-  function charAt($pos): self {
-    return new self($this->value[$pos]);
+  function charAt(int $pos): string {
+    return $this->value[$pos];
   }
 
   /** Converts all the alphabetic characters in a string to uppercase. */
