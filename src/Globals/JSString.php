@@ -34,7 +34,7 @@ final class JSString implements Stringable, ArrayAccess {
         break;
     }
 
-    $this->value = (string) $value;
+    $this->value = strval($value);
     $this->length = mb_strlen($this->value);
   }
 
