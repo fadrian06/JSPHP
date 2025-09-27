@@ -157,7 +157,7 @@ final class JSString implements Stringable, ArrayAccess {
 
   /** Converts all the alphabetic characters in a string to lowercase. */
   function toLowerCase(): self {
-    return new self(mb_strtolower($this->value));
+    return new self(strtolower($this->value));
   }
 
   /**
