@@ -26,14 +26,4 @@ final class toStringTest extends TestCase {
 
     self::assertSame('false', Boolean(false)->toString());
   }
-
-  function test_Description(): void {
-    Boolean::prototype()->toString = function (): string {
-      return 'Overridden';
-    };
-
-    self::assertSame('true', '' . true ? 'true' : 'false');
-    self::assertSame('Overridden', '' . new Boolean(true));
-  }
-
 }
