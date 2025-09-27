@@ -24,8 +24,8 @@
   "keywords": ["javascript", "open-source", "php", "library"],
   "scripts": {
     "test": "phpunit --colors=auto",
-    "lint": "phpstan -cphpstan.neon --no-progress",
-    "lint:save": "phpstan -cphpstan.neon --no-progress --generate-baseline=phpstan-errors.neon",
+    "lint": "phpstan --no-progress",
+    "lint:save": "phpstan --no-progress --generate-baseline=phpstan-errors.neon",
     "coverage": "phpunit --colors=auto --coverage-html=.coverage"
   },
   "scripts-descriptions": {
